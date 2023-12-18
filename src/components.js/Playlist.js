@@ -1,70 +1,65 @@
-import React, { useEffect } from "react";
-import { useState } from "react";
+import React, { useEffect, useContext } from "react";
 import { Link } from "react-router-dom";
-import NewPlaylistShow from "./newplaylist";
+import { playlistdata } from "../utils/usecontext";
 
 const Playlist = () => {
-  const [data, setData] = useState([]);
-  const [inputvalue, setinputValue] = useState("");
-
+  const { data, setData } = useContext(playlistdata);
   useEffect(() => {
     const storedData = JSON.parse(localStorage.getItem("playlists")) || [];
     setData(storedData);
   }, []);
 
-  const handleInputChange = (e) => {
-    setinputValue(e.target.value);
-  };
-
-  const handleFormSubmit = (e) => {
-    e.preventDefault();
-    const newPlaylist = { Playlist: inputvalue, id: Date.now(), videos: [] };
-    setData((prevData) => [...prevData, newPlaylist]);
-    setinputValue("");
-    const storedData = JSON.parse(localStorage.getItem("playlists")) || [];
-    localStorage.setItem("playlists", JSON.stringify([...storedData, newPlaylist]));
-  };
 
   const removed = (id) => {
     const update = data.filter((playlist) => playlist.id !== id);
-    localStorage.removeItem("playlists");
+    // Update local storage without the removed playlist
+    localStorage.setItem("playlists", JSON.stringify(update));
     setData(update);
   };
 
-  console.log(data);
-  
-
   return (
-    <>  
-      <div>
-        <h1>Playlists:-</h1>
-        <h1>Total Playlist:- {data.length}</h1>
-        <ul>
+    <>
+      <div className="text-center bg-white">
+        <h1 className="bg-white text-center text-3xl mt-4 font-semibold ">
+          Total Playlists: {data.length}
+        </h1>
+        <ul className="flex flex-col mt-10 items-center gap-4">
           {data.map((item) => (
-            <div className="mt-10 w-32 h-24" key={item.id}>
+            <div className="flex gap-4" key={item.id}>
               <Link to={"/playlist/" + item.id}>
-                <li className="w-32 h-24 bg-gray-100" key={item.id}>
+                <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full transition-all duration-300 focus:outline-none focus:ring focus:border-blue-300">
                   {item.Playlist}
-                </li>
+                </button>
               </Link>
-              <button className="bg-red-500 text-white " onClick={() => removed(item.id)}>
+              <button
+                className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-full transition-all duration-300 focus:outline-none focus:ring focus:border-red-300"
+                onClick={() => removed(item.id)}
+              >
                 Remove
               </button>
             </div>
           ))}
         </ul>
       </div>
-      <div className="mt-10">
-        <label>
-          Create New Playlist :
-          <input type="text" value={inputvalue} onChange={handleInputChange}></input>
-          <button className="bg-green-400" onClick={handleFormSubmit}>
-            Create
-          </button>
-        </label>
-      </div>
-      <NewPlaylistShow data={data} />
-        </>
+      {/* <div>
+        {data.map((item) => (
+          <div>
+            <span>{item?.videos?.kind}</span>
+            {item?.videos?.map((video) => (
+              <div>
+                <img
+                  className=""
+                  src={video?.snippet?.thumbnails?.high?.url || ""}
+                  alt="Video Thumbnail"
+                />
+                <span>{video.snippet.title}</span>
+                <span>{video.snippet.publishedAt}</span>
+              </div>
+            ))}
+          </div>
+        ))}
+      </div> */}
+    </>
   );
 };
 

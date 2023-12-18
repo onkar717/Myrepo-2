@@ -28889,7 +28889,9 @@ if ("development" === 'production') {
     }
   };
 }
-},{"react-dom":"node_modules/react-dom/index.js"}],"node_modules/@remix-run/router/dist/router.js":[function(require,module,exports) {
+},{"react-dom":"node_modules/react-dom/index.js"}],"src/components.js/download.jpg":[function(require,module,exports) {
+module.exports = "/download.5294a52d.jpg";
+},{}],"node_modules/@remix-run/router/dist/router.js":[function(require,module,exports) {
 var define;
 "use strict";
 
@@ -37230,195 +37232,53 @@ function useViewTransitionState(to, opts) {
   return (0, _router.matchPath)(path.pathname, nextPath) != null || (0, _router.matchPath)(path.pathname, currentPath) != null;
 }
 //#endregion
-},{"react":"node_modules/react/index.js","react-router":"node_modules/react-router/dist/index.js","@remix-run/router":"node_modules/@remix-run/router/dist/router.js"}],"src/components.js/Header.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","react-router":"node_modules/react-router/dist/index.js","@remix-run/router":"node_modules/@remix-run/router/dist/router.js"}],"src/reducer/reducer.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.default = void 0;
-var _react = _interopRequireWildcard(require("react"));
-var _reactRouterDom = require("react-router-dom");
-function _getRequireWildcardCache(e) { if ("function" != typeof WeakMap) return null; var r = new WeakMap(), t = new WeakMap(); return (_getRequireWildcardCache = function (e) { return e ? t : r; })(e); }
-function _interopRequireWildcard(e, r) { if (!r && e && e.__esModule) return e; if (null === e || "object" != typeof e && "function" != typeof e) return { default: e }; var t = _getRequireWildcardCache(r); if (t && t.has(e)) return t.get(e); var n = { __proto__: null }, a = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var u in e) if ("default" !== u && Object.prototype.hasOwnProperty.call(e, u)) { var i = a ? Object.getOwnPropertyDescriptor(e, u) : null; i && (i.get || i.set) ? Object.defineProperty(n, u, i) : n[u] = e[u]; } return n.default = e, t && t.set(e, n), n; }
-function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
-function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
-function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
-function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) arr2[i] = arr[i]; return arr2; }
-function _iterableToArrayLimit(r, l) { var t = null == r ? null : "undefined" != typeof Symbol && r[Symbol.iterator] || r["@@iterator"]; if (null != t) { var e, n, i, u, a = [], f = !0, o = !1; try { if (i = (t = t.call(r)).next, 0 === l) { if (Object(t) !== t) return; f = !1; } else for (; !(f = (e = i.call(t)).done) && (a.push(e.value), a.length !== l); f = !0); } catch (r) { o = !0, n = r; } finally { try { if (!f && null != t.return && (u = t.return(), Object(u) !== u)) return; } finally { if (o) throw n; } } return a; } }
-function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
-var Header = function Header() {
-  var _useState = (0, _react.useState)(''),
-    _useState2 = _slicedToArray(_useState, 2),
-    Search = _useState2[0],
-    setSearch = _useState2[1];
-  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement("div", {
-    className: "bg-blue-500 h-40 flex justify-center gap-32 items-center"
-  }, /*#__PURE__*/_react.default.createElement("div", {
-    className: "flex gap-4"
-  }, /*#__PURE__*/_react.default.createElement("input", {
-    className: "h-10 w-96 rounded-md",
-    type: "text",
-    onChange: function onChange(e) {
-      return setSearch(e.target.value);
-    }
-  }), /*#__PURE__*/_react.default.createElement("button", {
-    className: "text-white"
-  }, "Serach")), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
-    to: "/playlist"
-  }, /*#__PURE__*/_react.default.createElement("li", {
-    className: "list-none text-white"
-  }, "Playlist")), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, null, /*#__PURE__*/_react.default.createElement("li", null, "Home"))));
-};
-var _default = exports.default = Header;
-},{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/dist/index.js"}],"test.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-var _react = _interopRequireDefault(require("react"));
-var _newplaylist = _interopRequireDefault(require("./src/components.js/newplaylist"));
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-var Test = function Test(props) {
-  console.log(props);
-  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement("h1", null, "Hello"));
-};
-var _default = exports.default = Test;
-},{"react":"node_modules/react/index.js","./src/components.js/newplaylist":"src/components.js/newplaylist.js"}],"src/components.js/newplaylist.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-var _react = _interopRequireDefault(require("react"));
-var _test = _interopRequireDefault(require("../../test"));
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-var NewPlaylistShow = function NewPlaylistShow(_ref) {
-  var data = _ref.data;
-  // const {id} = useParams()
-  // if (!data) {
-  //   return <div>Loading...</div>; // You can customize this loading state
-  // }
-
-  var meta = [{
-    id: 12345,
-    name: "Onkar"
-  }];
-  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement(_test.default, {
-    meta: meta
-  })));
-};
-var _default = exports.default = NewPlaylistShow;
-},{"react":"node_modules/react/index.js","../../test":"test.js"}],"src/components.js/Playlist.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-var _react = _interopRequireWildcard(require("react"));
-var _reactRouterDom = require("react-router-dom");
-var _newplaylist = _interopRequireDefault(require("./newplaylist"));
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-function _getRequireWildcardCache(e) { if ("function" != typeof WeakMap) return null; var r = new WeakMap(), t = new WeakMap(); return (_getRequireWildcardCache = function (e) { return e ? t : r; })(e); }
-function _interopRequireWildcard(e, r) { if (!r && e && e.__esModule) return e; if (null === e || "object" != typeof e && "function" != typeof e) return { default: e }; var t = _getRequireWildcardCache(r); if (t && t.has(e)) return t.get(e); var n = { __proto__: null }, a = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var u in e) if ("default" !== u && Object.prototype.hasOwnProperty.call(e, u)) { var i = a ? Object.getOwnPropertyDescriptor(e, u) : null; i && (i.get || i.set) ? Object.defineProperty(n, u, i) : n[u] = e[u]; } return n.default = e, t && t.set(e, n), n; }
-function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
-function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
-function _iterableToArray(iter) { if (typeof Symbol !== "undefined" && iter[Symbol.iterator] != null || iter["@@iterator"] != null) return Array.from(iter); }
-function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToArray(arr); }
-function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
-function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
-function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
-function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) arr2[i] = arr[i]; return arr2; }
-function _iterableToArrayLimit(r, l) { var t = null == r ? null : "undefined" != typeof Symbol && r[Symbol.iterator] || r["@@iterator"]; if (null != t) { var e, n, i, u, a = [], f = !0, o = !1; try { if (i = (t = t.call(r)).next, 0 === l) { if (Object(t) !== t) return; f = !1; } else for (; !(f = (e = i.call(t)).done) && (a.push(e.value), a.length !== l); f = !0); } catch (r) { o = !0, n = r; } finally { try { if (!f && null != t.return && (u = t.return(), Object(u) !== u)) return; } finally { if (o) throw n; } } return a; } }
-function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
-var Playlist = function Playlist() {
-  var _useState = (0, _react.useState)([]),
-    _useState2 = _slicedToArray(_useState, 2),
-    data = _useState2[0],
-    setData = _useState2[1];
-  var _useState3 = (0, _react.useState)(""),
-    _useState4 = _slicedToArray(_useState3, 2),
-    inputvalue = _useState4[0],
-    setinputValue = _useState4[1];
-  (0, _react.useEffect)(function () {
-    var storedData = JSON.parse(localStorage.getItem("playlists")) || [];
-    setData(storedData);
-  }, []);
-  var handleInputChange = function handleInputChange(e) {
-    setinputValue(e.target.value);
-  };
-  var handleFormSubmit = function handleFormSubmit(e) {
-    e.preventDefault();
-    var newPlaylist = {
-      Playlist: inputvalue,
-      id: Date.now(),
-      videos: []
-    };
-    setData(function (prevData) {
-      return [].concat(_toConsumableArray(prevData), [newPlaylist]);
-    });
-    setinputValue("");
-    var storedData = JSON.parse(localStorage.getItem("playlists")) || [];
-    localStorage.setItem("playlists", JSON.stringify([].concat(_toConsumableArray(storedData), [newPlaylist])));
-  };
-  var removed = function removed(id) {
-    var update = data.filter(function (playlist) {
-      return playlist.id !== id;
-    });
-    localStorage.removeItem("playlists");
-    setData(update);
-  };
-  console.log(data);
-  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("h1", null, "Playlists:-"), /*#__PURE__*/_react.default.createElement("h1", null, "Total Playlist:- ", data.length), /*#__PURE__*/_react.default.createElement("ul", null, data.map(function (item) {
-    return /*#__PURE__*/_react.default.createElement("div", {
-      className: "mt-10 w-32 h-24",
-      key: item.id
-    }, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
-      to: "/playlist/" + item.id
-    }, /*#__PURE__*/_react.default.createElement("li", {
-      className: "w-32 h-24 bg-gray-100",
-      key: item.id
-    }, item.Playlist)), /*#__PURE__*/_react.default.createElement("button", {
-      className: "bg-red-500 text-white ",
-      onClick: function onClick() {
-        return removed(item.id);
-      }
-    }, "Remove"));
-  }))), /*#__PURE__*/_react.default.createElement("div", {
-    className: "mt-10"
-  }, /*#__PURE__*/_react.default.createElement("label", null, "Create New Playlist :", /*#__PURE__*/_react.default.createElement("input", {
-    type: "text",
-    value: inputvalue,
-    onChange: handleInputChange
-  }), /*#__PURE__*/_react.default.createElement("button", {
-    className: "bg-green-400",
-    onClick: handleFormSubmit
-  }, "Create"))), /*#__PURE__*/_react.default.createElement(_newplaylist.default, {
-    data: data
-  }));
-};
-var _default = exports.default = Playlist;
-},{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/dist/index.js","./newplaylist":"src/components.js/newplaylist.js"}],"src/components.js/YoutubeVideos.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-var _react = _interopRequireWildcard(require("react"));
-function _getRequireWildcardCache(e) { if ("function" != typeof WeakMap) return null; var r = new WeakMap(), t = new WeakMap(); return (_getRequireWildcardCache = function (e) { return e ? t : r; })(e); }
-function _interopRequireWildcard(e, r) { if (!r && e && e.__esModule) return e; if (null === e || "object" != typeof e && "function" != typeof e) return { default: e }; var t = _getRequireWildcardCache(r); if (t && t.has(e)) return t.get(e); var n = { __proto__: null }, a = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var u in e) if ("default" !== u && Object.prototype.hasOwnProperty.call(e, u)) { var i = a ? Object.getOwnPropertyDescriptor(e, u) : null; i && (i.get || i.set) ? Object.defineProperty(n, u, i) : n[u] = e[u]; } return n.default = e, t && t.set(e, n), n; }
+exports.LikedVideos = void 0;
 function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
 function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
 function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
 function _iterableToArray(iter) { if (typeof Symbol !== "undefined" && iter[Symbol.iterator] != null || iter["@@iterator"] != null) return Array.from(iter); }
 function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToArray(arr); }
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) arr2[i] = arr[i]; return arr2; }
 function ownKeys(e, r) { var t = Object.keys(e); if (Object.getOwnPropertySymbols) { var o = Object.getOwnPropertySymbols(e); r && (o = o.filter(function (r) { return Object.getOwnPropertyDescriptor(e, r).enumerable; })), t.push.apply(t, o); } return t; }
 function _objectSpread(e) { for (var r = 1; r < arguments.length; r++) { var t = null != arguments[r] ? arguments[r] : {}; r % 2 ? ownKeys(Object(t), !0).forEach(function (r) { _defineProperty(e, r, t[r]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t)) : ownKeys(Object(t)).forEach(function (r) { Object.defineProperty(e, r, Object.getOwnPropertyDescriptor(t, r)); }); } return e; }
+function _defineProperty(obj, key, value) { key = _toPropertyKey(key); if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+function _toPropertyKey(arg) { var key = _toPrimitive(arg, "string"); return _typeof(key) === "symbol" ? key : String(key); }
+function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
+var LikedVideos = exports.LikedVideos = function LikedVideos(state, action) {
+  switch (action.type) {
+    case "ADD_TO_LIKE":
+      return _objectSpread(_objectSpread({}, state), {}, {
+        Liked: [].concat(_toConsumableArray(state.Liked), [action.payload])
+      });
+    case "REMOVE_TO_LIKE":
+      return _objectSpread(_objectSpread({}, state), {}, {
+        Liked: state.Liked.filter(function (c) {
+          return c.id !== action.payload.id;
+        })
+      });
+    default:
+      return state;
+  }
+};
+},{}],"src/utils/usecontext.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.playlistdata = exports.default = void 0;
+var _react = _interopRequireWildcard(require("react"));
+var _reducer = require("../reducer/reducer");
+function _getRequireWildcardCache(e) { if ("function" != typeof WeakMap) return null; var r = new WeakMap(), t = new WeakMap(); return (_getRequireWildcardCache = function (e) { return e ? t : r; })(e); }
+function _interopRequireWildcard(e, r) { if (!r && e && e.__esModule) return e; if (null === e || "object" != typeof e && "function" != typeof e) return { default: e }; var t = _getRequireWildcardCache(r); if (t && t.has(e)) return t.get(e); var n = { __proto__: null }, a = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var u in e) if ("default" !== u && Object.prototype.hasOwnProperty.call(e, u)) { var i = a ? Object.getOwnPropertyDescriptor(e, u) : null; i && (i.get || i.set) ? Object.defineProperty(n, u, i) : n[u] = e[u]; } return n.default = e, t && t.set(e, n), n; }
+function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
 function _defineProperty(obj, key, value) { key = _toPropertyKey(key); if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 function _toPropertyKey(arg) { var key = _toPrimitive(arg, "string"); return _typeof(key) === "symbol" ? key : String(key); }
 function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
@@ -37428,86 +37288,416 @@ function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o =
 function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) arr2[i] = arr[i]; return arr2; }
 function _iterableToArrayLimit(r, l) { var t = null == r ? null : "undefined" != typeof Symbol && r[Symbol.iterator] || r["@@iterator"]; if (null != t) { var e, n, i, u, a = [], f = !0, o = !1; try { if (i = (t = t.call(r)).next, 0 === l) { if (Object(t) !== t) return; f = !1; } else for (; !(f = (e = i.call(t)).done) && (a.push(e.value), a.length !== l); f = !0); } catch (r) { o = !0, n = r; } finally { try { if (!f && null != t.return && (u = t.return(), Object(u) !== u)) return; } finally { if (o) throw n; } } return a; } }
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
-var APIKEY = "AIzaSyBlYe34vwc3hPZowkVOraACn0cFdjob1Ys";
-var channelid = "UCeVMnSShP_Iviwkknt83cww";
-var fetchurl = "https://www.googleapis.com/youtube/v3/playlists?key=".concat(APIKEY, "&channelId=").concat(channelid, "&part=snippet,id&order=date&maxResults=15");
-var YoutubeVideo = function YoutubeVideo() {
+var playlistdata = exports.playlistdata = /*#__PURE__*/(0, _react.createContext)();
+var Context = function Context(_ref) {
+  var children = _ref.children;
   var _useState = (0, _react.useState)([]),
     _useState2 = _slicedToArray(_useState, 2),
-    allvideos = _useState2[0],
-    setallvideos = _useState2[1];
-  var _useState3 = (0, _react.useState)([]),
+    data = _useState2[0],
+    setData = _useState2[1];
+  var _useState3 = (0, _react.useState)(""),
     _useState4 = _slicedToArray(_useState3, 2),
-    dropdownStates = _useState4[0],
-    setDropdownStates = _useState4[1];
+    Search = _useState4[0],
+    setSearch = _useState4[1];
+  var _useState5 = (0, _react.useState)([]),
+    _useState6 = _slicedToArray(_useState5, 2),
+    allvideos = _useState6[0],
+    setallvideos = _useState6[1];
+  var _useReducer = (0, _react.useReducer)(_reducer.LikedVideos, _defineProperty({
+      Liked: []
+    }, "Liked", JSON.parse(localStorage.getItem("likded")) || [])),
+    _useReducer2 = _slicedToArray(_useReducer, 2),
+    state = _useReducer2[0],
+    dispatched = _useReducer2[1];
+  return /*#__PURE__*/_react.default.createElement(playlistdata.Provider, {
+    value: {
+      Search: Search,
+      setSearch: setSearch,
+      data: data,
+      setData: setData,
+      allvideos: allvideos,
+      setallvideos: setallvideos,
+      state: state,
+      dispatched: dispatched
+    }
+  }, children);
+};
+var _default = exports.default = Context;
+},{"react":"node_modules/react/index.js","../reducer/reducer":"src/reducer/reducer.js"}],"src/components.js/Header.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+var _react = _interopRequireWildcard(require("react"));
+var _download = _interopRequireDefault(require("../components.js/download.jpg"));
+var _reactRouterDom = require("react-router-dom");
+var _usecontext = require("../utils/usecontext");
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+function _getRequireWildcardCache(e) { if ("function" != typeof WeakMap) return null; var r = new WeakMap(), t = new WeakMap(); return (_getRequireWildcardCache = function (e) { return e ? t : r; })(e); }
+function _interopRequireWildcard(e, r) { if (!r && e && e.__esModule) return e; if (null === e || "object" != typeof e && "function" != typeof e) return { default: e }; var t = _getRequireWildcardCache(r); if (t && t.has(e)) return t.get(e); var n = { __proto__: null }, a = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var u in e) if ("default" !== u && Object.prototype.hasOwnProperty.call(e, u)) { var i = a ? Object.getOwnPropertyDescriptor(e, u) : null; i && (i.get || i.set) ? Object.defineProperty(n, u, i) : n[u] = e[u]; } return n.default = e, t && t.set(e, n), n; }
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) arr2[i] = arr[i]; return arr2; }
+function _iterableToArrayLimit(r, l) { var t = null == r ? null : "undefined" != typeof Symbol && r[Symbol.iterator] || r["@@iterator"]; if (null != t) { var e, n, i, u, a = [], f = !0, o = !1; try { if (i = (t = t.call(r)).next, 0 === l) { if (Object(t) !== t) return; f = !1; } else for (; !(f = (e = i.call(t)).done) && (a.push(e.value), a.length !== l); f = !0); } catch (r) { o = !0, n = r; } finally { try { if (!f && null != t.return && (u = t.return(), Object(u) !== u)) return; } finally { if (o) throw n; } } return a; } }
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; } // import like from "../components.js/"
+var Header = function Header() {
+  // const [Search, setSearch] = useState("");
+  var _useContext = (0, _react.useContext)(_usecontext.playlistdata),
+    Search = _useContext.Search,
+    setSearch = _useContext.setSearch;
+  var _useState = (0, _react.useState)(),
+    _useState2 = _slicedToArray(_useState, 2),
+    value = _useState2[0],
+    setvalue = _useState2[1];
+
+  // Your YouTube video URL
+  // const searchfunction = (Search) => {
+  var youtubeUrl = Search;
+  var regex = /[?&]v=([^&]+)/;
+  var match = regex.exec(youtubeUrl);
+  var vValue = match && match[1];
+  // return   setvalue(vValue) || null;
+  // }
+
+  // console.log(value);
+
+  // console.log(allvideos);
+
+  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement("div", {
+    className: "bg-blue-600 h-28 flex justify-center gap-40 items-center"
+  }, /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
+    to: "/"
+  }, /*#__PURE__*/_react.default.createElement("img", {
+    src: _download.default,
+    className: "w-24 rounded-full bg-blue-600",
+    onClick: function onClick() {
+      return setSearch(e.target.value);
+    }
+  }))), /*#__PURE__*/_react.default.createElement("div", {
+    className: "flex justify-center items-center"
+  }, /*#__PURE__*/_react.default.createElement("div", {
+    className: "flex items-center h-10 rounded-full shadow-md"
+  }, /*#__PURE__*/_react.default.createElement("input", {
+    type: "text",
+    placeholder: "Paste the Youtube video url",
+    className: " h-10 p-4 shadow-md outline-none w-96 text-black rounded-l-full bg-white",
+    onChange: function onChange(e) {
+      return setSearch(e.target.value);
+    }
+  }), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
+    to: "/Videoid/" + vValue
+  }, /*#__PURE__*/_react.default.createElement("button", {
+    className: "p-2 w-14 h-10  bg-blue-500  rounded-r-full"
+  }, /*#__PURE__*/_react.default.createElement("svg", {
+    xmlns: "http://www.w3.org/2000/svg",
+    x: "0px",
+    y: "0px",
+    width: "20",
+    height: "20",
+    viewBox: "0 0 30 30"
+  }, /*#__PURE__*/_react.default.createElement("path", {
+    d: "M 13 3 C 7.4889971 3 3 7.4889971 3 13 C 3 18.511003 7.4889971 23 13 23 C 15.396508 23 17.597385 22.148986 19.322266 20.736328 L 25.292969 26.707031 A 1.0001 1.0001 0 1 0 26.707031 25.292969 L 20.736328 19.322266 C 22.148986 17.597385 23 15.396508 23 13 C 23 7.4889971 18.511003 3 13 3 z M 13 5 C 17.430123 5 21 8.5698774 21 13 C 21 17.430123 17.430123 21 13 21 C 8.5698774 21 5 17.430123 5 13 C 5 8.5698774 8.5698774 5 13 5 z"
+  })))))), /*#__PURE__*/_react.default.createElement("div", {
+    className: "list-none text-white items-center flex gap-12"
+  }, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
+    to: "/playlist"
+  }, /*#__PURE__*/_react.default.createElement("div", {
+    onClick: function onClick() {
+      return setSearch(e.target.value);
+    },
+    className: "flex items-center gap-2"
+  }, /*#__PURE__*/_react.default.createElement("li", {
+    className: "font-semibold"
+  }, "Playlists"), /*#__PURE__*/_react.default.createElement("span", null, /*#__PURE__*/_react.default.createElement("svg", {
+    xmlns: "http://www.w3.org/2000/svg",
+    width: "40",
+    height: "40",
+    id: "playlist"
+  }, /*#__PURE__*/_react.default.createElement("path", {
+    fill: "none",
+    d: "M0 0h48v48H0z"
+  }), /*#__PURE__*/_react.default.createElement("path", {
+    d: "M28 20H4v4h24v-4zm0-8H4v4h24v-4zm8 16v-8h-4v8h-8v4h8v8h4v-8h8v-4h-8zM4 32h16v-4H4v4z"
+  }))))), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
+    to: "/watchlater",
+    onClick: function onClick() {
+      return setSearch(e.target.value);
+    }
+  }, /*#__PURE__*/_react.default.createElement("div", {
+    className: "flex items-center gap-2"
+  }, /*#__PURE__*/_react.default.createElement("li", {
+    className: "font-semibold"
+  }, "Watch later"), /*#__PURE__*/_react.default.createElement("span", null, /*#__PURE__*/_react.default.createElement("svg", {
+    xmlns: "http://www.w3.org/2000/svg",
+    width: "35",
+    height: "35",
+    viewBox: "0 0 24 24",
+    id: "watch-later"
+  }, /*#__PURE__*/_react.default.createElement("path", {
+    d: "M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm.5-13H11v6l5.2 3.2.8-1.3-4.5-2.7z"
+  }))))), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
+    to: "/likedVideos",
+    onClick: function onClick() {
+      return setSearch(e.target.value);
+    }
+  }, /*#__PURE__*/_react.default.createElement("div", {
+    className: "flex items-center gap-2"
+  }, /*#__PURE__*/_react.default.createElement("li", {
+    className: "font-semibold"
+  }, "Like videos"), /*#__PURE__*/_react.default.createElement("span", null, /*#__PURE__*/_react.default.createElement("svg", {
+    width: "40px",
+    height: "40px",
+    viewBox: "0 0 24 24",
+    fill: "none",
+    xmlns: "http://www.w3.org/2000/svg"
+  }, /*#__PURE__*/_react.default.createElement("path", {
+    "fill-rule": "evenodd",
+    "clip-rule": "evenodd",
+    d: "M15.0501 7.04419C15.4673 5.79254 14.5357 4.5 13.2163 4.5C12.5921 4.5 12.0062 4.80147 11.6434 5.30944L8.47155 9.75H5.85748L5.10748 10.5V18L5.85748 18.75H16.8211L19.1247 14.1428C19.8088 12.7747 19.5406 11.1224 18.4591 10.0408C17.7926 9.37439 16.8888 9 15.9463 9H14.3981L15.0501 7.04419ZM9.60751 10.7404L12.864 6.1813C12.9453 6.06753 13.0765 6 13.2163 6C13.5118 6 13.7205 6.28951 13.627 6.56984L12.317 10.5H15.9463C16.491 10.5 17.0133 10.7164 17.3984 11.1015C18.0235 11.7265 18.1784 12.6814 17.7831 13.472L15.8941 17.25H9.60751V10.7404ZM8.10751 17.25H6.60748V11.25H8.10751V17.25Z",
+    fill: "#080341"
+  }))))))));
+};
+var _default = exports.default = Header;
+},{"react":"node_modules/react/index.js","../components.js/download.jpg":"src/components.js/download.jpg","react-router-dom":"node_modules/react-router-dom/dist/index.js","../utils/usecontext":"src/utils/usecontext.js"}],"src/components.js/Playlist.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+var _react = _interopRequireWildcard(require("react"));
+var _reactRouterDom = require("react-router-dom");
+var _usecontext = require("../utils/usecontext");
+function _getRequireWildcardCache(e) { if ("function" != typeof WeakMap) return null; var r = new WeakMap(), t = new WeakMap(); return (_getRequireWildcardCache = function (e) { return e ? t : r; })(e); }
+function _interopRequireWildcard(e, r) { if (!r && e && e.__esModule) return e; if (null === e || "object" != typeof e && "function" != typeof e) return { default: e }; var t = _getRequireWildcardCache(r); if (t && t.has(e)) return t.get(e); var n = { __proto__: null }, a = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var u in e) if ("default" !== u && Object.prototype.hasOwnProperty.call(e, u)) { var i = a ? Object.getOwnPropertyDescriptor(e, u) : null; i && (i.get || i.set) ? Object.defineProperty(n, u, i) : n[u] = e[u]; } return n.default = e, t && t.set(e, n), n; }
+var Playlist = function Playlist() {
+  var _useContext = (0, _react.useContext)(_usecontext.playlistdata),
+    data = _useContext.data,
+    setData = _useContext.setData;
+  (0, _react.useEffect)(function () {
+    var storedData = JSON.parse(localStorage.getItem("playlists")) || [];
+    setData(storedData);
+  }, []);
+  var removed = function removed(id) {
+    var update = data.filter(function (playlist) {
+      return playlist.id !== id;
+    });
+    // Update local storage without the removed playlist
+    localStorage.setItem("playlists", JSON.stringify(update));
+    setData(update);
+  };
+  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement("div", {
+    className: "text-center bg-white"
+  }, /*#__PURE__*/_react.default.createElement("h1", {
+    className: "bg-white text-center text-3xl mt-4 font-semibold "
+  }, "Total Playlists: ", data.length), /*#__PURE__*/_react.default.createElement("ul", {
+    className: "flex flex-col mt-10 items-center gap-4"
+  }, data.map(function (item) {
+    return /*#__PURE__*/_react.default.createElement("div", {
+      className: "flex gap-4",
+      key: item.id
+    }, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
+      to: "/playlist/" + item.id
+    }, /*#__PURE__*/_react.default.createElement("button", {
+      className: "bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full transition-all duration-300 focus:outline-none focus:ring focus:border-blue-300"
+    }, item.Playlist)), /*#__PURE__*/_react.default.createElement("button", {
+      className: "bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-full transition-all duration-300 focus:outline-none focus:ring focus:border-red-300",
+      onClick: function onClick() {
+        return removed(item.id);
+      }
+    }, "Remove"));
+  }))));
+};
+var _default = exports.default = Playlist;
+},{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/dist/index.js","../utils/usecontext":"src/utils/usecontext.js"}],"src/components.js/newplaylist.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+var _react = _interopRequireWildcard(require("react"));
+var _usecontext = require("../utils/usecontext");
+var _reactRouterDom = require("react-router-dom");
+function _getRequireWildcardCache(e) { if ("function" != typeof WeakMap) return null; var r = new WeakMap(), t = new WeakMap(); return (_getRequireWildcardCache = function (e) { return e ? t : r; })(e); }
+function _interopRequireWildcard(e, r) { if (!r && e && e.__esModule) return e; if (null === e || "object" != typeof e && "function" != typeof e) return { default: e }; var t = _getRequireWildcardCache(r); if (t && t.has(e)) return t.get(e); var n = { __proto__: null }, a = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var u in e) if ("default" !== u && Object.prototype.hasOwnProperty.call(e, u)) { var i = a ? Object.getOwnPropertyDescriptor(e, u) : null; i && (i.get || i.set) ? Object.defineProperty(n, u, i) : n[u] = e[u]; } return n.default = e, t && t.set(e, n), n; }
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) arr2[i] = arr[i]; return arr2; }
+function _iterableToArrayLimit(r, l) { var t = null == r ? null : "undefined" != typeof Symbol && r[Symbol.iterator] || r["@@iterator"]; if (null != t) { var e, n, i, u, a = [], f = !0, o = !1; try { if (i = (t = t.call(r)).next, 0 === l) { if (Object(t) !== t) return; f = !1; } else for (; !(f = (e = i.call(t)).done) && (a.push(e.value), a.length !== l); f = !0); } catch (r) { o = !0, n = r; } finally { try { if (!f && null != t.return && (u = t.return(), Object(u) !== u)) return; } finally { if (o) throw n; } } return a; } }
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+var NewPlaylistShow = function NewPlaylistShow() {
+  var _useContext = (0, _react.useContext)(_usecontext.playlistdata),
+    data = _useContext.data;
+  var _useParams = (0, _reactRouterDom.useParams)(),
+    id = _useParams.id;
+  var _useState = (0, _react.useState)(),
+    _useState2 = _slicedToArray(_useState, 2),
+    value = _useState2[0],
+    setvalue = _useState2[1];
+  var matched = function matched() {
+    var playlist = data.find(function (item) {
+      return item.id === parseInt(id, 10);
+    });
+    setvalue(playlist);
+    return playlist;
+  };
+  (0, _react.useEffect)(function () {
+    matched();
+  }, []);
+  console.log(value);
+
+  // console.log(value);
+
+  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, value && /*#__PURE__*/_react.default.createElement("div", {
+    className: "bg-white ml-10"
+  }, /*#__PURE__*/_react.default.createElement("h1", {
+    className: "text-center font-bold text-black text-3xl mt-5"
+  }, "Playlist - ", value.Playlist), /*#__PURE__*/_react.default.createElement("ul", null, /*#__PURE__*/_react.default.createElement("div", {
+    className: "cursor-pointe  gap-10 mt-10 flex-wrap flex"
+  }, value === null || value === void 0 ? void 0 : value.videos.map(function (item) {
+    var _item$snippet;
+    var mapped = item === undefined || item === null ? null : item;
+    return mapped ? /*#__PURE__*/_react.default.createElement("div", {
+      className: "w-96 rounded-3xl   "
+    }, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
+      to: '/Videoid/' + item.id
+    }, /*#__PURE__*/_react.default.createElement("img", {
+      className: "h-60 w-96   rounded-lg",
+      src: item === null || item === void 0 || (_item$snippet = item.snippet) === null || _item$snippet === void 0 || (_item$snippet = _item$snippet.thumbnails) === null || _item$snippet === void 0 || (_item$snippet = _item$snippet.high) === null || _item$snippet === void 0 ? void 0 : _item$snippet.url,
+      alt: "Video Thumbnail"
+    }), /*#__PURE__*/_react.default.createElement("span", {
+      className: "font-medium"
+    }, item.snippet.title), /*#__PURE__*/_react.default.createElement("p", {
+      className: "text-sm text-gray-500"
+    }, item.snippet.channelTitle))) : null;
+  })))));
+};
+var _default = exports.default = NewPlaylistShow;
+},{"react":"node_modules/react/index.js","../utils/usecontext":"src/utils/usecontext.js","react-router-dom":"node_modules/react-router-dom/dist/index.js"}],"src/components.js/SingleVideo.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+var _react = _interopRequireDefault(require("react"));
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+var SingleVideo = function SingleVideo(_ref) {
+  var _item$snippet;
+  var item = _ref.item;
+  // console.log(item);
+
+  return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("div", {
+    className: "cursor-pointer"
+  }, /*#__PURE__*/_react.default.createElement("img", {
+    className: "w-full rounded-lg h-60 cursor-pointer ",
+    src: item === null || item === void 0 || (_item$snippet = item.snippet) === null || _item$snippet === void 0 || (_item$snippet = _item$snippet.thumbnails) === null || _item$snippet === void 0 || (_item$snippet = _item$snippet.high) === null || _item$snippet === void 0 ? void 0 : _item$snippet.url
+  }), /*#__PURE__*/_react.default.createElement("div", {
+    className: "text-black"
+  }, /*#__PURE__*/_react.default.createElement("p", {
+    className: "font-medium"
+  }, item.snippet.title), /*#__PURE__*/_react.default.createElement("p", {
+    className: "text-sm text-gray-500"
+  }, item.snippet.channelTitle))));
+};
+var _default = exports.default = SingleVideo;
+},{"react":"node_modules/react/index.js"}],"src/components.js/shimmer.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+var _react = _interopRequireDefault(require("react"));
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+var Shimmer = function Shimmer() {
+  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement("div", {
+    className: "flex flex-wrap justify-center bg-white gap-8"
+  }, Array(16).fill("").map(function (item, index) {
+    return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("div", {
+      className: " h-52 mt-16  bg-gray-400 w-96  rounded-lg",
+      key: index
+    }), /*#__PURE__*/_react.default.createElement("div", {
+      className: "flex gap-6"
+    }, /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("div", {
+      className: " h-10  mt-3 bg-gray-400 w-10 rounded-full",
+      key: index
+    })), /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("div", {
+      className: " h-4  mt-3 bg-gray-400 w-80 ",
+      key: index
+    }), /*#__PURE__*/_react.default.createElement("div", {
+      className: " h-4  mt-3 bg-gray-400 w-44 ",
+      key: index
+    }))));
+  })));
+};
+var _default = exports.default = Shimmer;
+},{"react":"node_modules/react/index.js"}],"src/components.js/YoutubeVideos.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+var _react = _interopRequireWildcard(require("react"));
+var _reactRouterDom = require("react-router-dom");
+var _SingleVideo = _interopRequireDefault(require("./SingleVideo"));
+var _usecontext = require("../utils/usecontext");
+var _shimmer = _interopRequireDefault(require("./shimmer"));
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+function _getRequireWildcardCache(e) { if ("function" != typeof WeakMap) return null; var r = new WeakMap(), t = new WeakMap(); return (_getRequireWildcardCache = function (e) { return e ? t : r; })(e); }
+function _interopRequireWildcard(e, r) { if (!r && e && e.__esModule) return e; if (null === e || "object" != typeof e && "function" != typeof e) return { default: e }; var t = _getRequireWildcardCache(r); if (t && t.has(e)) return t.get(e); var n = { __proto__: null }, a = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var u in e) if ("default" !== u && Object.prototype.hasOwnProperty.call(e, u)) { var i = a ? Object.getOwnPropertyDescriptor(e, u) : null; i && (i.get || i.set) ? Object.defineProperty(n, u, i) : n[u] = e[u]; } return n.default = e, t && t.set(e, n), n; }
+function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
+function ownKeys(e, r) { var t = Object.keys(e); if (Object.getOwnPropertySymbols) { var o = Object.getOwnPropertySymbols(e); r && (o = o.filter(function (r) { return Object.getOwnPropertyDescriptor(e, r).enumerable; })), t.push.apply(t, o); } return t; }
+function _objectSpread(e) { for (var r = 1; r < arguments.length; r++) { var t = null != arguments[r] ? arguments[r] : {}; r % 2 ? ownKeys(Object(t), !0).forEach(function (r) { _defineProperty(e, r, t[r]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t)) : ownKeys(Object(t)).forEach(function (r) { Object.defineProperty(e, r, Object.getOwnPropertyDescriptor(t, r)); }); } return e; }
+function _defineProperty(obj, key, value) { key = _toPropertyKey(key); if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+function _toPropertyKey(arg) { var key = _toPrimitive(arg, "string"); return _typeof(key) === "symbol" ? key : String(key); }
+function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
+// const APIKEY = "AIzaSyALHt-CMEvAYETSqyySVOgbDu-3I5pdVj4";
+// const APIKEY = "AIzaSyBcOLaYL08YnVNm8HpwIdwTmNYC0snz9a8";
+var APIKEY = "AIzaSyBTGD1SP06pjn-vwFdBGD6GyryK-GN8ueA";
+var channelid = "UCeVMnSShP_Iviwkknt83cww";
+var fetchurl = "https://www.googleapis.com/youtube/v3/search?key=".concat(APIKEY, "&channelId=").concat(channelid, "&part=snippet,id&order=date&maxResults=16");
+var YoutubeVideo = function YoutubeVideo() {
+  var _useContext = (0, _react.useContext)(_usecontext.playlistdata),
+    allvideos = _useContext.allvideos,
+    setallvideos = _useContext.setallvideos;
+  // console.log(allvideos);
   (0, _react.useEffect)(function () {
     fetch(fetchurl).then(function (response) {
       return response.json();
     }).then(function (resJson) {
       var result = resJson.items.map(function (doc) {
-        return _objectSpread({}, doc);
+        var _doc$id;
+        return _objectSpread(_objectSpread({}, doc), {}, {
+          Videolink: "https://www.youtube.com/embed/" + (doc === null || doc === void 0 || (_doc$id = doc.id) === null || _doc$id === void 0 ? void 0 : _doc$id.videoId)
+        });
       });
       setallvideos(result);
-      setDropdownStates(Array(result.length).fill(false)); // Initialize states for each video
     });
   }, []);
-  var toggleDropdown = function toggleDropdown(index) {
-    setDropdownStates(function (prevStates) {
-      var newStates = _toConsumableArray(prevStates);
-      newStates[index] = !newStates[index];
-      return newStates;
-    });
-  };
-  console.log(allvideos);
+  if (allvideos.length === 0) return /*#__PURE__*/_react.default.createElement(_shimmer.default, null);
   return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement("div", {
-    className: "flex justify-center gap-8 flex-wrap "
-  }, allvideos.map(function (item, index) {
+    className: "flex justify-center gap-8  bg-white flex-wrap "
+  }, allvideos === null || allvideos === void 0 ? void 0 : allvideos.map(function (item, index) {
     return /*#__PURE__*/_react.default.createElement("div", {
+      className: "w-96 mt-10",
+      key: index
+    }, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
+      to: "/Videoid/" + item.id.videoId
+    }, /*#__PURE__*/_react.default.createElement(_SingleVideo.default, {
+      item: item,
       key: item.id
-    }, /*#__PURE__*/_react.default.createElement("img", {
-      className: "w-80",
-      src: item.snippet.thumbnails.high.url,
-      alt: item.snippet.title
-    }), /*#__PURE__*/_react.default.createElement("p", {
-      className: "w-80 "
-    }, " Title - ", item.snippet.title), /*#__PURE__*/_react.default.createElement("p", null, "Video_Id -: ", item.id), /*#__PURE__*/_react.default.createElement("div", {
-      className: "relative inline-block text-left"
-    }, /*#__PURE__*/_react.default.createElement("button", {
-      type: "button",
-      onClick: function onClick() {
-        return toggleDropdown(index);
-      },
-      className: "inline-flex items-center px-4 py-2 border border-gray-300 rounded-md bg-gray-100 text-sm font-medium text-gray-700 hover:bg-gray-200 focus:outline-none focus:ring focus:border-blue-300"
-    }, "ADD to Playlist", /*#__PURE__*/_react.default.createElement("svg", {
-      className: "-mr-1 ml-2 h-5 w-5",
-      xmlns: "http://www.w3.org/2000/svg",
-      viewBox: "0 0 20 20",
-      fill: "currentColor"
-    }, /*#__PURE__*/_react.default.createElement("path", {
-      fillRule: "evenodd",
-      d: "M10 12l-1 1-4-4 1-1.5L10 9l4-4 1 1z",
-      clipRule: "evenodd"
-    }))), dropdownStates[index] && /*#__PURE__*/_react.default.createElement("div", {
-      className: "origin-top-right absolute right-0 mt-2 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5"
-    }, /*#__PURE__*/_react.default.createElement("div", {
-      className: "py-1"
-    }, /*#__PURE__*/_react.default.createElement("a", {
-      href: "/option1",
-      className: "block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
-    }, "Option 1"), /*#__PURE__*/_react.default.createElement("a", {
-      href: "/option2",
-      className: "block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
-    }, "Option 2"), /*#__PURE__*/_react.default.createElement("a", {
-      href: "/option3",
-      className: "block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
-    }, "Option 3"), /*#__PURE__*/_react.default.createElement("a", {
-      href: "/option3",
-      className: "block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
-    }, "Option 3")))));
+    })));
   })));
 };
 var _default = exports.default = YoutubeVideo;
-},{"react":"node_modules/react/index.js"}],"node_modules/use-sync-external-store/cjs/use-sync-external-store-shim.development.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/dist/index.js","./SingleVideo":"src/components.js/SingleVideo.js","../utils/usecontext":"src/utils/usecontext.js","./shimmer":"src/components.js/shimmer.js"}],"node_modules/use-sync-external-store/cjs/use-sync-external-store-shim.development.js":[function(require,module,exports) {
 /**
  * @license React
  * use-sync-external-store-shim.development.js
@@ -44535,34 +44725,39 @@ var autoBatchEnhancer = function (options) {
 // src/index.ts
 exports.autoBatchEnhancer = autoBatchEnhancer;
 (0, _immer.enableES5)();
-},{"immer":"node_modules/immer/dist/immer.esm.js","redux":"node_modules/redux/es/redux.js","reselect":"node_modules/reselect/es/index.js","redux-thunk":"node_modules/redux-thunk/es/index.js","process":"node_modules/process/browser.js"}],"src/utils/VideoSlice.js":[function(require,module,exports) {
+},{"immer":"node_modules/immer/dist/immer.esm.js","redux":"node_modules/redux/es/redux.js","reselect":"node_modules/reselect/es/index.js","redux-thunk":"node_modules/redux-thunk/es/index.js","process":"node_modules/process/browser.js"}],"src/utils/WatchLater.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.removevideo = exports.default = exports.addvideo = void 0;
+exports.removeFromWatchLater = exports.default = exports.addToWatchLater = void 0;
 var _toolkit = require("@reduxjs/toolkit");
-var VideoSlice = (0, _toolkit.createSlice)({
-  name: 'video',
-  initialState: {
-    items: ['onkar', 'paras']
-    // items:[{name:'playlistname' , videos:[]}]
-  },
-
+function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
+function _defineProperty(obj, key, value) { key = _toPropertyKey(key); if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+function _toPropertyKey(arg) { var key = _toPrimitive(arg, "string"); return _typeof(key) === "symbol" ? key : String(key); }
+function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); } // watchLaterSlice.js
+var watchLaterSlice = (0, _toolkit.createSlice)({
+  name: 'watchLater',
+  initialState: _defineProperty({
+    videos: []
+  }, "videos", JSON.parse(localStorage.getItem("watch")) || []),
   reducers: {
-    addvideo: function addvideo(state, action) {
-      state.items.push(action.payload);
+    addToWatchLater: function addToWatchLater(state, action) {
+      // Add a video to the watch later list
+      state.videos.push(action.payload);
     },
-    removevideo: function removevideo(state, action) {
-      state.items.pop();
+    removeFromWatchLater: function removeFromWatchLater(state, action) {
+      // Remove a video from the watch later list
+      // state.videos = state.videos.filter(video => video.id !== action.payload.id);
+      state.videos.pop();
     }
   }
 });
-var _VideoSlice$actions = VideoSlice.actions,
-  addvideo = exports.addvideo = _VideoSlice$actions.addvideo,
-  removevideo = exports.removevideo = _VideoSlice$actions.removevideo;
-var _default = exports.default = VideoSlice.reducer;
+var _watchLaterSlice$acti = watchLaterSlice.actions,
+  addToWatchLater = exports.addToWatchLater = _watchLaterSlice$acti.addToWatchLater,
+  removeFromWatchLater = exports.removeFromWatchLater = _watchLaterSlice$acti.removeFromWatchLater;
+var _default = exports.default = watchLaterSlice.reducer;
 },{"@reduxjs/toolkit":"node_modules/@reduxjs/toolkit/dist/redux-toolkit.esm.js"}],"src/utils/store.js":[function(require,module,exports) {
 "use strict";
 
@@ -44571,18 +44766,1305 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = void 0;
 var _toolkit = require("@reduxjs/toolkit");
-var _VideoSlice = _interopRequireDefault(require("./VideoSlice"));
+var _WatchLater = _interopRequireDefault(require("./WatchLater"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 var store = (0, _toolkit.configureStore)({
   reducer: {
-    video: _VideoSlice.default
+    watchLater: _WatchLater.default
   }
 });
 var _default = exports.default = store;
-},{"@reduxjs/toolkit":"node_modules/@reduxjs/toolkit/dist/redux-toolkit.esm.js","./VideoSlice":"src/utils/VideoSlice.js"}],"script.js":[function(require,module,exports) {
+},{"@reduxjs/toolkit":"node_modules/@reduxjs/toolkit/dist/redux-toolkit.esm.js","./WatchLater":"src/utils/WatchLater.js"}],"src/utils/useYoutubeVideo.js":[function(require,module,exports) {
 "use strict";
 
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+var _react = _interopRequireWildcard(require("react"));
+var _reactRouterDom = require("react-router-dom");
+function _getRequireWildcardCache(e) { if ("function" != typeof WeakMap) return null; var r = new WeakMap(), t = new WeakMap(); return (_getRequireWildcardCache = function (e) { return e ? t : r; })(e); }
+function _interopRequireWildcard(e, r) { if (!r && e && e.__esModule) return e; if (null === e || "object" != typeof e && "function" != typeof e) return { default: e }; var t = _getRequireWildcardCache(r); if (t && t.has(e)) return t.get(e); var n = { __proto__: null }, a = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var u in e) if ("default" !== u && Object.prototype.hasOwnProperty.call(e, u)) { var i = a ? Object.getOwnPropertyDescriptor(e, u) : null; i && (i.get || i.set) ? Object.defineProperty(n, u, i) : n[u] = e[u]; } return n.default = e, t && t.set(e, n), n; }
+function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
+function ownKeys(e, r) { var t = Object.keys(e); if (Object.getOwnPropertySymbols) { var o = Object.getOwnPropertySymbols(e); r && (o = o.filter(function (r) { return Object.getOwnPropertyDescriptor(e, r).enumerable; })), t.push.apply(t, o); } return t; }
+function _objectSpread(e) { for (var r = 1; r < arguments.length; r++) { var t = null != arguments[r] ? arguments[r] : {}; r % 2 ? ownKeys(Object(t), !0).forEach(function (r) { _defineProperty(e, r, t[r]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t)) : ownKeys(Object(t)).forEach(function (r) { Object.defineProperty(e, r, Object.getOwnPropertyDescriptor(t, r)); }); } return e; }
+function _defineProperty(obj, key, value) { key = _toPropertyKey(key); if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+function _toPropertyKey(arg) { var key = _toPrimitive(arg, "string"); return _typeof(key) === "symbol" ? key : String(key); }
+function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) arr2[i] = arr[i]; return arr2; }
+function _iterableToArrayLimit(r, l) { var t = null == r ? null : "undefined" != typeof Symbol && r[Symbol.iterator] || r["@@iterator"]; if (null != t) { var e, n, i, u, a = [], f = !0, o = !1; try { if (i = (t = t.call(r)).next, 0 === l) { if (Object(t) !== t) return; f = !1; } else for (; !(f = (e = i.call(t)).done) && (a.push(e.value), a.length !== l); f = !0); } catch (r) { o = !0, n = r; } finally { try { if (!f && null != t.return && (u = t.return(), Object(u) !== u)) return; } finally { if (o) throw n; } } return a; } }
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+var UseYoutubeVideo = function UseYoutubeVideo() {
+  var _useParams = (0, _reactRouterDom.useParams)(),
+    id = _useParams.id;
+  var _useState = (0, _react.useState)({}),
+    _useState2 = _slicedToArray(_useState, 2),
+    video = _useState2[0],
+    setVideo = _useState2[1];
+
+  // const APIKEY = "AIzaSyC4sMaiAoC9FyPx8OTiujn-y1ENTRr07h4"
+  // const APIKEY = "AIzaSyALHt-CMEvAYETSqyySVOgbDu-3I5pdVj4";
+  var APIKEY = "AIzaSyBTGD1SP06pjn-vwFdBGD6GyryK-GN8ueA";
+  // const APIKEY = "AIzaSyBcOLaYL08YnVNm8HpwIdwTmNYC0snz9a8";
+  var fetchurl = "https://www.googleapis.com/youtube/v3/videos?id=".concat(id, "&key=").concat(APIKEY, "&part=snippet,contentDetails,statistics");
+  (0, _react.useEffect)(function () {
+    fetch(fetchurl).then(function (response) {
+      return response.json();
+    }).then(function (resJson) {
+      var result = resJson.items.map(function (doc) {
+        return _objectSpread(_objectSpread({}, doc), {}, {
+          Videolink: "https://www.youtube.com/embed/" + (doc === null || doc === void 0 ? void 0 : doc.id)
+        });
+      });
+      setVideo(result);
+    });
+  }, []);
+  return video;
+};
+var _default = exports.default = UseYoutubeVideo;
+},{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/dist/index.js"}],"src/components.js/like.jpg":[function(require,module,exports) {
+module.exports = "/like.4c03a547.jpg";
+},{}],"src/components.js/like1.jpg":[function(require,module,exports) {
+module.exports = "/like1.afdce75c.jpg";
+},{}],"node_modules/clsx/dist/clsx.m.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.clsx = clsx;
+exports.default = void 0;
+function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
+function r(e) {
+  var t,
+    f,
+    n = "";
+  if ("string" == typeof e || "number" == typeof e) n += e;else if ("object" == _typeof(e)) if (Array.isArray(e)) for (t = 0; t < e.length; t++) e[t] && (f = r(e[t])) && (n && (n += " "), n += f);else for (t in e) e[t] && (n && (n += " "), n += t);
+  return n;
+}
+function clsx() {
+  for (var e, t, f = 0, n = ""; f < arguments.length;) (e = arguments[f++]) && (t = r(e)) && (n && (n += " "), n += t);
+  return n;
+}
+var _default = exports.default = clsx;
+},{}],"node_modules/react-toastify/dist/react-toastify.esm.mjs":[function(require,module,exports) {
+"use strict";
+'use client';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.Zoom = exports.ToastContainer = exports.Slide = exports.Icons = exports.Flip = exports.Bounce = void 0;
+exports.collapseToast = g;
+exports.cssTransition = h;
+exports.toast = Q;
+exports.useToast = _;
+exports.useToastContainer = C;
+var _react = _interopRequireWildcard(require("react"));
+var _clsx = _interopRequireDefault(require("clsx"));
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+function _getRequireWildcardCache(e) { if ("function" != typeof WeakMap) return null; var r = new WeakMap(), t = new WeakMap(); return (_getRequireWildcardCache = function (e) { return e ? t : r; })(e); }
+function _interopRequireWildcard(e, r) { if (!r && e && e.__esModule) return e; if (null === e || "object" != typeof e && "function" != typeof e) return { default: e }; var t = _getRequireWildcardCache(r); if (t && t.has(e)) return t.get(e); var n = { __proto__: null }, a = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var u in e) if ("default" !== u && Object.prototype.hasOwnProperty.call(e, u)) { var i = a ? Object.getOwnPropertyDescriptor(e, u) : null; i && (i.get || i.set) ? Object.defineProperty(n, u, i) : n[u] = e[u]; } return n.default = e, t && t.set(e, n), n; }
+const u = t => "number" == typeof t && !isNaN(t),
+  d = t => "string" == typeof t,
+  p = t => "function" == typeof t,
+  m = t => d(t) || p(t) ? t : null,
+  f = t => (0, _react.isValidElement)(t) || d(t) || p(t) || u(t);
+function g(t, e, n) {
+  void 0 === n && (n = 300);
+  const {
+    scrollHeight: o,
+    style: s
+  } = t;
+  requestAnimationFrame(() => {
+    s.minHeight = "initial", s.height = o + "px", s.transition = `all ${n}ms`, requestAnimationFrame(() => {
+      s.height = "0", s.padding = "0", s.margin = "0", setTimeout(e, n);
+    });
+  });
+}
+function h(e) {
+  let {
+    enter: a,
+    exit: r,
+    appendPosition: i = !1,
+    collapse: l = !0,
+    collapseDuration: c = 300
+  } = e;
+  return function (e) {
+    let {
+      children: u,
+      position: d,
+      preventExitTransition: p,
+      done: m,
+      nodeRef: f,
+      isIn: h
+    } = e;
+    const y = i ? `${a}--${d}` : a,
+      v = i ? `${r}--${d}` : r,
+      T = (0, _react.useRef)(0);
+    return (0, _react.useLayoutEffect)(() => {
+      const t = f.current,
+        e = y.split(" "),
+        n = o => {
+          o.target === f.current && (t.dispatchEvent(new Event("d")), t.removeEventListener("animationend", n), t.removeEventListener("animationcancel", n), 0 === T.current && "animationcancel" !== o.type && t.classList.remove(...e));
+        };
+      t.classList.add(...e), t.addEventListener("animationend", n), t.addEventListener("animationcancel", n);
+    }, []), (0, _react.useEffect)(() => {
+      const t = f.current,
+        e = () => {
+          t.removeEventListener("animationend", e), l ? g(t, m, c) : m();
+        };
+      h || (p ? e() : (T.current = 1, t.className += ` ${v}`, t.addEventListener("animationend", e)));
+    }, [h]), _react.default.createElement(_react.default.Fragment, null, u);
+  };
+}
+function y(t, e) {
+  return null != t ? {
+    content: t.content,
+    containerId: t.props.containerId,
+    id: t.props.toastId,
+    theme: t.props.theme,
+    type: t.props.type,
+    data: t.props.data || {},
+    isLoading: t.props.isLoading,
+    icon: t.props.icon,
+    status: e
+  } : {};
+}
+const v = {
+    list: new Map(),
+    emitQueue: new Map(),
+    on(t, e) {
+      return this.list.has(t) || this.list.set(t, []), this.list.get(t).push(e), this;
+    },
+    off(t, e) {
+      if (e) {
+        const n = this.list.get(t).filter(t => t !== e);
+        return this.list.set(t, n), this;
+      }
+      return this.list.delete(t), this;
+    },
+    cancelEmit(t) {
+      const e = this.emitQueue.get(t);
+      return e && (e.forEach(clearTimeout), this.emitQueue.delete(t)), this;
+    },
+    emit(t) {
+      this.list.has(t) && this.list.get(t).forEach(e => {
+        const n = setTimeout(() => {
+          e(...[].slice.call(arguments, 1));
+        }, 0);
+        this.emitQueue.has(t) || this.emitQueue.set(t, []), this.emitQueue.get(t).push(n);
+      });
+    }
+  },
+  T = e => {
+    let {
+      theme: n,
+      type: o,
+      ...s
+    } = e;
+    return _react.default.createElement("svg", {
+      viewBox: "0 0 24 24",
+      width: "100%",
+      height: "100%",
+      fill: "colored" === n ? "currentColor" : `var(--toastify-icon-color-${o})`,
+      ...s
+    });
+  },
+  E = exports.Icons = {
+    info: function (e) {
+      return _react.default.createElement(T, {
+        ...e
+      }, _react.default.createElement("path", {
+        d: "M12 0a12 12 0 1012 12A12.013 12.013 0 0012 0zm.25 5a1.5 1.5 0 11-1.5 1.5 1.5 1.5 0 011.5-1.5zm2.25 13.5h-4a1 1 0 010-2h.75a.25.25 0 00.25-.25v-4.5a.25.25 0 00-.25-.25h-.75a1 1 0 010-2h1a2 2 0 012 2v4.75a.25.25 0 00.25.25h.75a1 1 0 110 2z"
+      }));
+    },
+    warning: function (e) {
+      return _react.default.createElement(T, {
+        ...e
+      }, _react.default.createElement("path", {
+        d: "M23.32 17.191L15.438 2.184C14.728.833 13.416 0 11.996 0c-1.42 0-2.733.833-3.443 2.184L.533 17.448a4.744 4.744 0 000 4.368C1.243 23.167 2.555 24 3.975 24h16.05C22.22 24 24 22.044 24 19.632c0-.904-.251-1.746-.68-2.44zm-9.622 1.46c0 1.033-.724 1.823-1.698 1.823s-1.698-.79-1.698-1.822v-.043c0-1.028.724-1.822 1.698-1.822s1.698.79 1.698 1.822v.043zm.039-12.285l-.84 8.06c-.057.581-.408.943-.897.943-.49 0-.84-.367-.896-.942l-.84-8.065c-.057-.624.25-1.095.779-1.095h1.91c.528.005.84.476.784 1.1z"
+      }));
+    },
+    success: function (e) {
+      return _react.default.createElement(T, {
+        ...e
+      }, _react.default.createElement("path", {
+        d: "M12 0a12 12 0 1012 12A12.014 12.014 0 0012 0zm6.927 8.2l-6.845 9.289a1.011 1.011 0 01-1.43.188l-4.888-3.908a1 1 0 111.25-1.562l4.076 3.261 6.227-8.451a1 1 0 111.61 1.183z"
+      }));
+    },
+    error: function (e) {
+      return _react.default.createElement(T, {
+        ...e
+      }, _react.default.createElement("path", {
+        d: "M11.983 0a12.206 12.206 0 00-8.51 3.653A11.8 11.8 0 000 12.207 11.779 11.779 0 0011.8 24h.214A12.111 12.111 0 0024 11.791 11.766 11.766 0 0011.983 0zM10.5 16.542a1.476 1.476 0 011.449-1.53h.027a1.527 1.527 0 011.523 1.47 1.475 1.475 0 01-1.449 1.53h-.027a1.529 1.529 0 01-1.523-1.47zM11 12.5v-6a1 1 0 012 0v6a1 1 0 11-2 0z"
+      }));
+    },
+    spinner: function () {
+      return _react.default.createElement("div", {
+        className: "Toastify__spinner"
+      });
+    }
+  };
+function C(t) {
+  const [, o] = (0, _react.useReducer)(t => t + 1, 0),
+    [l, c] = (0, _react.useState)([]),
+    g = (0, _react.useRef)(null),
+    h = (0, _react.useRef)(new Map()).current,
+    T = t => -1 !== l.indexOf(t),
+    C = (0, _react.useRef)({
+      toastKey: 1,
+      displayedToast: 0,
+      count: 0,
+      queue: [],
+      props: t,
+      containerId: null,
+      isToastActive: T,
+      getToast: t => h.get(t)
+    }).current;
+  function b(t) {
+    let {
+      containerId: e
+    } = t;
+    const {
+      limit: n
+    } = C.props;
+    !n || e && C.containerId !== e || (C.count -= C.queue.length, C.queue = []);
+  }
+  function I(t) {
+    c(e => null == t ? [] : e.filter(e => e !== t));
+  }
+  function _() {
+    const {
+      toastContent: t,
+      toastProps: e,
+      staleId: n
+    } = C.queue.shift();
+    O(t, e, n);
+  }
+  function L(t, n) {
+    let {
+      delay: s,
+      staleId: r,
+      ...i
+    } = n;
+    if (!f(t) || function (t) {
+      return !g.current || C.props.enableMultiContainer && t.containerId !== C.props.containerId || h.has(t.toastId) && null == t.updateId;
+    }(i)) return;
+    const {
+        toastId: l,
+        updateId: c,
+        data: T
+      } = i,
+      {
+        props: b
+      } = C,
+      L = () => I(l),
+      N = null == c;
+    N && C.count++;
+    const M = {
+      ...b,
+      style: b.toastStyle,
+      key: C.toastKey++,
+      ...Object.fromEntries(Object.entries(i).filter(t => {
+        let [e, n] = t;
+        return null != n;
+      })),
+      toastId: l,
+      updateId: c,
+      data: T,
+      closeToast: L,
+      isIn: !1,
+      className: m(i.className || b.toastClassName),
+      bodyClassName: m(i.bodyClassName || b.bodyClassName),
+      progressClassName: m(i.progressClassName || b.progressClassName),
+      autoClose: !i.isLoading && (R = i.autoClose, w = b.autoClose, !1 === R || u(R) && R > 0 ? R : w),
+      deleteToast() {
+        const t = y(h.get(l), "removed");
+        h.delete(l), v.emit(4, t);
+        const e = C.queue.length;
+        if (C.count = null == l ? C.count - C.displayedToast : C.count - 1, C.count < 0 && (C.count = 0), e > 0) {
+          const t = null == l ? C.props.limit : 1;
+          if (1 === e || 1 === t) C.displayedToast++, _();else {
+            const n = t > e ? e : t;
+            C.displayedToast = n;
+            for (let t = 0; t < n; t++) _();
+          }
+        } else o();
+      }
+    };
+    var R, w;
+    M.iconOut = function (t) {
+      let {
+          theme: n,
+          type: o,
+          isLoading: s,
+          icon: r
+        } = t,
+        i = null;
+      const l = {
+        theme: n,
+        type: o
+      };
+      return !1 === r || (p(r) ? i = r(l) : (0, _react.isValidElement)(r) ? i = (0, _react.cloneElement)(r, l) : d(r) || u(r) ? i = r : s ? i = E.spinner() : (t => t in E)(o) && (i = E[o](l))), i;
+    }(M), p(i.onOpen) && (M.onOpen = i.onOpen), p(i.onClose) && (M.onClose = i.onClose), M.closeButton = b.closeButton, !1 === i.closeButton || f(i.closeButton) ? M.closeButton = i.closeButton : !0 === i.closeButton && (M.closeButton = !f(b.closeButton) || b.closeButton);
+    let x = t;
+    (0, _react.isValidElement)(t) && !d(t.type) ? x = (0, _react.cloneElement)(t, {
+      closeToast: L,
+      toastProps: M,
+      data: T
+    }) : p(t) && (x = t({
+      closeToast: L,
+      toastProps: M,
+      data: T
+    })), b.limit && b.limit > 0 && C.count > b.limit && N ? C.queue.push({
+      toastContent: x,
+      toastProps: M,
+      staleId: r
+    }) : u(s) ? setTimeout(() => {
+      O(x, M, r);
+    }, s) : O(x, M, r);
+  }
+  function O(t, e, n) {
+    const {
+      toastId: o
+    } = e;
+    n && h.delete(n);
+    const s = {
+      content: t,
+      props: e
+    };
+    h.set(o, s), c(t => [...t, o].filter(t => t !== n)), v.emit(4, y(s, null == s.props.updateId ? "added" : "updated"));
+  }
+  return (0, _react.useEffect)(() => (C.containerId = t.containerId, v.cancelEmit(3).on(0, L).on(1, t => g.current && I(t)).on(5, b).emit(2, C), () => {
+    h.clear(), v.emit(3, C);
+  }), []), (0, _react.useEffect)(() => {
+    C.props = t, C.isToastActive = T, C.displayedToast = l.length;
+  }), {
+    getToastToRender: function (e) {
+      const n = new Map(),
+        o = Array.from(h.values());
+      return t.newestOnTop && o.reverse(), o.forEach(t => {
+        const {
+          position: e
+        } = t.props;
+        n.has(e) || n.set(e, []), n.get(e).push(t);
+      }), Array.from(n, t => e(t[0], t[1]));
+    },
+    containerRef: g,
+    isToastActive: T
+  };
+}
+function b(t) {
+  return t.targetTouches && t.targetTouches.length >= 1 ? t.targetTouches[0].clientX : t.clientX;
+}
+function I(t) {
+  return t.targetTouches && t.targetTouches.length >= 1 ? t.targetTouches[0].clientY : t.clientY;
+}
+function _(t) {
+  const [o, a] = (0, _react.useState)(!1),
+    [r, l] = (0, _react.useState)(!1),
+    c = (0, _react.useRef)(null),
+    u = (0, _react.useRef)({
+      start: 0,
+      x: 0,
+      y: 0,
+      delta: 0,
+      removalDistance: 0,
+      canCloseOnClick: !0,
+      canDrag: !1,
+      boundingRect: null,
+      didMove: !1
+    }).current,
+    d = (0, _react.useRef)(t),
+    {
+      autoClose: m,
+      pauseOnHover: f,
+      closeToast: g,
+      onClick: h,
+      closeOnClick: y
+    } = t;
+  function v(e) {
+    if (t.draggable) {
+      "touchstart" === e.nativeEvent.type && e.nativeEvent.preventDefault(), u.didMove = !1, document.addEventListener("mousemove", _), document.addEventListener("mouseup", L), document.addEventListener("touchmove", _), document.addEventListener("touchend", L);
+      const n = c.current;
+      u.canCloseOnClick = !0, u.canDrag = !0, u.boundingRect = n.getBoundingClientRect(), n.style.transition = "", u.x = b(e.nativeEvent), u.y = I(e.nativeEvent), "x" === t.draggableDirection ? (u.start = u.x, u.removalDistance = n.offsetWidth * (t.draggablePercent / 100)) : (u.start = u.y, u.removalDistance = n.offsetHeight * (80 === t.draggablePercent ? 1.5 * t.draggablePercent : t.draggablePercent / 100));
+    }
+  }
+  function T(e) {
+    if (u.boundingRect) {
+      const {
+        top: n,
+        bottom: o,
+        left: s,
+        right: a
+      } = u.boundingRect;
+      "touchend" !== e.nativeEvent.type && t.pauseOnHover && u.x >= s && u.x <= a && u.y >= n && u.y <= o ? C() : E();
+    }
+  }
+  function E() {
+    a(!0);
+  }
+  function C() {
+    a(!1);
+  }
+  function _(e) {
+    const n = c.current;
+    u.canDrag && n && (u.didMove = !0, o && C(), u.x = b(e), u.y = I(e), u.delta = "x" === t.draggableDirection ? u.x - u.start : u.y - u.start, u.start !== u.x && (u.canCloseOnClick = !1), n.style.transform = `translate${t.draggableDirection}(${u.delta}px)`, n.style.opacity = "" + (1 - Math.abs(u.delta / u.removalDistance)));
+  }
+  function L() {
+    document.removeEventListener("mousemove", _), document.removeEventListener("mouseup", L), document.removeEventListener("touchmove", _), document.removeEventListener("touchend", L);
+    const e = c.current;
+    if (u.canDrag && u.didMove && e) {
+      if (u.canDrag = !1, Math.abs(u.delta) > u.removalDistance) return l(!0), void t.closeToast();
+      e.style.transition = "transform 0.2s, opacity 0.2s", e.style.transform = `translate${t.draggableDirection}(0)`, e.style.opacity = "1";
+    }
+  }
+  (0, _react.useEffect)(() => {
+    d.current = t;
+  }), (0, _react.useEffect)(() => (c.current && c.current.addEventListener("d", E, {
+    once: !0
+  }), p(t.onOpen) && t.onOpen((0, _react.isValidElement)(t.children) && t.children.props), () => {
+    const t = d.current;
+    p(t.onClose) && t.onClose((0, _react.isValidElement)(t.children) && t.children.props);
+  }), []), (0, _react.useEffect)(() => (t.pauseOnFocusLoss && (document.hasFocus() || C(), window.addEventListener("focus", E), window.addEventListener("blur", C)), () => {
+    t.pauseOnFocusLoss && (window.removeEventListener("focus", E), window.removeEventListener("blur", C));
+  }), [t.pauseOnFocusLoss]);
+  const O = {
+    onMouseDown: v,
+    onTouchStart: v,
+    onMouseUp: T,
+    onTouchEnd: T
+  };
+  return m && f && (O.onMouseEnter = C, O.onMouseLeave = E), y && (O.onClick = t => {
+    h && h(t), u.canCloseOnClick && g();
+  }), {
+    playToast: E,
+    pauseToast: C,
+    isRunning: o,
+    preventExitTransition: r,
+    toastRef: c,
+    eventHandlers: O
+  };
+}
+function L(e) {
+  let {
+    closeToast: n,
+    theme: o,
+    ariaLabel: s = "close"
+  } = e;
+  return _react.default.createElement("button", {
+    className: `Toastify__close-button Toastify__close-button--${o}`,
+    type: "button",
+    onClick: t => {
+      t.stopPropagation(), n(t);
+    },
+    "aria-label": s
+  }, _react.default.createElement("svg", {
+    "aria-hidden": "true",
+    viewBox: "0 0 14 16"
+  }, _react.default.createElement("path", {
+    fillRule: "evenodd",
+    d: "M7.71 8.23l3.75 3.75-1.48 1.48-3.75-3.75-3.75 3.75L1 11.98l3.75-3.75L1 4.48 2.48 3l3.75 3.75L9.98 3l1.48 1.48-3.75 3.75z"
+  })));
+}
+function O(e) {
+  let {
+    delay: n,
+    isRunning: o,
+    closeToast: s,
+    type: a = "default",
+    hide: r,
+    className: i,
+    style: l,
+    controlledProgress: u,
+    progress: d,
+    rtl: m,
+    isIn: f,
+    theme: g
+  } = e;
+  const h = r || u && 0 === d,
+    y = {
+      ...l,
+      animationDuration: `${n}ms`,
+      animationPlayState: o ? "running" : "paused",
+      opacity: h ? 0 : 1
+    };
+  u && (y.transform = `scaleX(${d})`);
+  const v = (0, _clsx.default)("Toastify__progress-bar", u ? "Toastify__progress-bar--controlled" : "Toastify__progress-bar--animated", `Toastify__progress-bar-theme--${g}`, `Toastify__progress-bar--${a}`, {
+      "Toastify__progress-bar--rtl": m
+    }),
+    T = p(i) ? i({
+      rtl: m,
+      type: a,
+      defaultClassName: v
+    }) : (0, _clsx.default)(v, i);
+  return _react.default.createElement("div", {
+    role: "progressbar",
+    "aria-hidden": h ? "true" : "false",
+    "aria-label": "notification timer",
+    className: T,
+    style: y,
+    [u && d >= 1 ? "onTransitionEnd" : "onAnimationEnd"]: u && d < 1 ? null : () => {
+      f && s();
+    }
+  });
+}
+const N = n => {
+    const {
+        isRunning: o,
+        preventExitTransition: s,
+        toastRef: r,
+        eventHandlers: i
+      } = _(n),
+      {
+        closeButton: l,
+        children: u,
+        autoClose: d,
+        onClick: m,
+        type: f,
+        hideProgressBar: g,
+        closeToast: h,
+        transition: y,
+        position: v,
+        className: T,
+        style: E,
+        bodyClassName: C,
+        bodyStyle: b,
+        progressClassName: I,
+        progressStyle: N,
+        updateId: M,
+        role: R,
+        progress: w,
+        rtl: x,
+        toastId: $,
+        deleteToast: k,
+        isIn: P,
+        isLoading: B,
+        iconOut: D,
+        closeOnClick: A,
+        theme: z
+      } = n,
+      F = (0, _clsx.default)("Toastify__toast", `Toastify__toast-theme--${z}`, `Toastify__toast--${f}`, {
+        "Toastify__toast--rtl": x
+      }, {
+        "Toastify__toast--close-on-click": A
+      }),
+      H = p(T) ? T({
+        rtl: x,
+        position: v,
+        type: f,
+        defaultClassName: F
+      }) : (0, _clsx.default)(F, T),
+      S = !!w || !d,
+      q = {
+        closeToast: h,
+        type: f,
+        theme: z
+      };
+    let Q = null;
+    return !1 === l || (Q = p(l) ? l(q) : (0, _react.isValidElement)(l) ? (0, _react.cloneElement)(l, q) : L(q)), _react.default.createElement(y, {
+      isIn: P,
+      done: k,
+      position: v,
+      preventExitTransition: s,
+      nodeRef: r
+    }, _react.default.createElement("div", {
+      id: $,
+      onClick: m,
+      className: H,
+      ...i,
+      style: E,
+      ref: r
+    }, _react.default.createElement("div", {
+      ...(P && {
+        role: R
+      }),
+      className: p(C) ? C({
+        type: f
+      }) : (0, _clsx.default)("Toastify__toast-body", C),
+      style: b
+    }, null != D && _react.default.createElement("div", {
+      className: (0, _clsx.default)("Toastify__toast-icon", {
+        "Toastify--animate-icon Toastify__zoom-enter": !B
+      })
+    }, D), _react.default.createElement("div", null, u)), Q, _react.default.createElement(O, {
+      ...(M && !S ? {
+        key: `pb-${M}`
+      } : {}),
+      rtl: x,
+      theme: z,
+      delay: d,
+      isRunning: o,
+      isIn: P,
+      closeToast: h,
+      hide: g,
+      type: f,
+      style: N,
+      className: I,
+      controlledProgress: S,
+      progress: w || 0
+    })));
+  },
+  M = function (t, e) {
+    return void 0 === e && (e = !1), {
+      enter: `Toastify--animate Toastify__${t}-enter`,
+      exit: `Toastify--animate Toastify__${t}-exit`,
+      appendPosition: e
+    };
+  },
+  R = exports.Bounce = h(M("bounce", !0)),
+  w = exports.Slide = h(M("slide", !0)),
+  x = exports.Zoom = h(M("zoom")),
+  $ = exports.Flip = h(M("flip")),
+  k = exports.ToastContainer = (0, _react.forwardRef)((e, n) => {
+    const {
+        getToastToRender: o,
+        containerRef: a,
+        isToastActive: r
+      } = C(e),
+      {
+        className: i,
+        style: l,
+        rtl: u,
+        containerId: d
+      } = e;
+    function f(t) {
+      const e = (0, _clsx.default)("Toastify__toast-container", `Toastify__toast-container--${t}`, {
+        "Toastify__toast-container--rtl": u
+      });
+      return p(i) ? i({
+        position: t,
+        rtl: u,
+        defaultClassName: e
+      }) : (0, _clsx.default)(e, m(i));
+    }
+    return (0, _react.useEffect)(() => {
+      n && (n.current = a.current);
+    }, []), _react.default.createElement("div", {
+      ref: a,
+      className: "Toastify",
+      id: d
+    }, o((e, n) => {
+      const o = n.length ? {
+        ...l
+      } : {
+        ...l,
+        pointerEvents: "none"
+      };
+      return _react.default.createElement("div", {
+        className: f(e),
+        style: o,
+        key: `container-${e}`
+      }, n.map((e, o) => {
+        let {
+          content: s,
+          props: a
+        } = e;
+        return _react.default.createElement(N, {
+          ...a,
+          isIn: r(a.toastId),
+          style: {
+            ...a.style,
+            "--nth": o + 1,
+            "--len": n.length
+          },
+          key: `toast-${a.key}`
+        }, s);
+      }));
+    }));
+  });
+k.displayName = "ToastContainer", k.defaultProps = {
+  position: "top-right",
+  transition: R,
+  autoClose: 5e3,
+  closeButton: L,
+  pauseOnHover: !0,
+  pauseOnFocusLoss: !0,
+  closeOnClick: !0,
+  draggable: !0,
+  draggablePercent: 80,
+  draggableDirection: "x",
+  role: "alert",
+  theme: "light"
+};
+let P,
+  B = new Map(),
+  D = [],
+  A = 1;
+function z() {
+  return "" + A++;
+}
+function F(t) {
+  return t && (d(t.toastId) || u(t.toastId)) ? t.toastId : z();
+}
+function H(t, e) {
+  return B.size > 0 ? v.emit(0, t, e) : D.push({
+    content: t,
+    options: e
+  }), e.toastId;
+}
+function S(t, e) {
+  return {
+    ...e,
+    type: e && e.type || t,
+    toastId: F(e)
+  };
+}
+function q(t) {
+  return (e, n) => H(e, S(t, n));
+}
+function Q(t, e) {
+  return H(t, S("default", e));
+}
+Q.loading = (t, e) => H(t, S("default", {
+  isLoading: !0,
+  autoClose: !1,
+  closeOnClick: !1,
+  closeButton: !1,
+  draggable: !1,
+  ...e
+})), Q.promise = function (t, e, n) {
+  let o,
+    {
+      pending: s,
+      error: a,
+      success: r
+    } = e;
+  s && (o = d(s) ? Q.loading(s, n) : Q.loading(s.render, {
+    ...n,
+    ...s
+  }));
+  const i = {
+      isLoading: null,
+      autoClose: null,
+      closeOnClick: null,
+      closeButton: null,
+      draggable: null
+    },
+    l = (t, e, s) => {
+      if (null == e) return void Q.dismiss(o);
+      const a = {
+          type: t,
+          ...i,
+          ...n,
+          data: s
+        },
+        r = d(e) ? {
+          render: e
+        } : e;
+      return o ? Q.update(o, {
+        ...a,
+        ...r
+      }) : Q(r.render, {
+        ...a,
+        ...r
+      }), s;
+    },
+    c = p(t) ? t() : t;
+  return c.then(t => l("success", r, t)).catch(t => l("error", a, t)), c;
+}, Q.success = q("success"), Q.info = q("info"), Q.error = q("error"), Q.warning = q("warning"), Q.warn = Q.warning, Q.dark = (t, e) => H(t, S("default", {
+  theme: "dark",
+  ...e
+})), Q.dismiss = t => {
+  B.size > 0 ? v.emit(1, t) : D = D.filter(e => null != t && e.options.toastId !== t);
+}, Q.clearWaitingQueue = function (t) {
+  return void 0 === t && (t = {}), v.emit(5, t);
+}, Q.isActive = t => {
+  let e = !1;
+  return B.forEach(n => {
+    n.isToastActive && n.isToastActive(t) && (e = !0);
+  }), e;
+}, Q.update = function (t, e) {
+  void 0 === e && (e = {}), setTimeout(() => {
+    const n = function (t, e) {
+      let {
+        containerId: n
+      } = e;
+      const o = B.get(n || P);
+      return o && o.getToast(t);
+    }(t, e);
+    if (n) {
+      const {
+          props: o,
+          content: s
+        } = n,
+        a = {
+          delay: 100,
+          ...o,
+          ...e,
+          toastId: e.toastId || t,
+          updateId: z()
+        };
+      a.toastId !== t && (a.staleId = t);
+      const r = a.render || s;
+      delete a.render, H(r, a);
+    }
+  }, 0);
+}, Q.done = t => {
+  Q.update(t, {
+    progress: 1
+  });
+}, Q.onChange = t => (v.on(4, t), () => {
+  v.off(4, t);
+}), Q.POSITION = {
+  TOP_LEFT: "top-left",
+  TOP_RIGHT: "top-right",
+  TOP_CENTER: "top-center",
+  BOTTOM_LEFT: "bottom-left",
+  BOTTOM_RIGHT: "bottom-right",
+  BOTTOM_CENTER: "bottom-center"
+}, Q.TYPE = {
+  INFO: "info",
+  SUCCESS: "success",
+  WARNING: "warning",
+  ERROR: "error",
+  DEFAULT: "default"
+}, v.on(2, t => {
+  P = t.containerId || t, B.set(P, t), D.forEach(t => {
+    v.emit(0, t.content, t.options);
+  }), D = [];
+}).on(3, t => {
+  B.delete(t.containerId || t), 0 === B.size && v.off(0).off(1).off(5);
+});
+},{"react":"node_modules/react/index.js","clsx":"node_modules/clsx/dist/clsx.m.js"}],"node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
+var bundleURL = null;
+function getBundleURLCached() {
+  if (!bundleURL) {
+    bundleURL = getBundleURL();
+  }
+  return bundleURL;
+}
+function getBundleURL() {
+  // Attempt to find the URL of the current script and use that as the base URL
+  try {
+    throw new Error();
+  } catch (err) {
+    var matches = ('' + err.stack).match(/(https?|file|ftp|chrome-extension|moz-extension):\/\/[^)\n]+/g);
+    if (matches) {
+      return getBaseURL(matches[0]);
+    }
+  }
+  return '/';
+}
+function getBaseURL(url) {
+  return ('' + url).replace(/^((?:https?|file|ftp|chrome-extension|moz-extension):\/\/.+)?\/[^/]+(?:\?.*)?$/, '$1') + '/';
+}
+exports.getBundleURL = getBundleURLCached;
+exports.getBaseURL = getBaseURL;
+},{}],"node_modules/parcel-bundler/src/builtins/css-loader.js":[function(require,module,exports) {
+var bundle = require('./bundle-url');
+function updateLink(link) {
+  var newLink = link.cloneNode();
+  newLink.onload = function () {
+    link.remove();
+  };
+  newLink.href = link.href.split('?')[0] + '?' + Date.now();
+  link.parentNode.insertBefore(newLink, link.nextSibling);
+}
+var cssTimeout = null;
+function reloadCSS() {
+  if (cssTimeout) {
+    return;
+  }
+  cssTimeout = setTimeout(function () {
+    var links = document.querySelectorAll('link[rel="stylesheet"]');
+    for (var i = 0; i < links.length; i++) {
+      if (bundle.getBaseURL(links[i].href) === bundle.getBundleURL()) {
+        updateLink(links[i]);
+      }
+    }
+    cssTimeout = null;
+  }, 50);
+}
+module.exports = reloadCSS;
+},{"./bundle-url":"node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"node_modules/react-toastify/dist/ReactToastify.css":[function(require,module,exports) {
+
+        var reloadCSS = require('_css_loader');
+        module.hot.dispose(reloadCSS);
+        module.hot.accept(reloadCSS);
+      
+},{"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"src/components.js/PlayVideo.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+var _react = _interopRequireWildcard(require("react"));
+var _useYoutubeVideo = _interopRequireDefault(require("../utils/useYoutubeVideo"));
+var _reactRouterDom = require("react-router-dom");
+var _WatchLater = require("../utils/WatchLater");
+var _like = _interopRequireDefault(require("../components.js/like.jpg"));
+var _like2 = _interopRequireDefault(require("../components.js/like1.jpg"));
+var _reactRedux = require("react-redux");
+var _usecontext = require("../utils/usecontext");
+var _reactToastify = require("react-toastify");
+require("react-toastify/dist/ReactToastify.css");
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+function _getRequireWildcardCache(e) { if ("function" != typeof WeakMap) return null; var r = new WeakMap(), t = new WeakMap(); return (_getRequireWildcardCache = function (e) { return e ? t : r; })(e); }
+function _interopRequireWildcard(e, r) { if (!r && e && e.__esModule) return e; if (null === e || "object" != typeof e && "function" != typeof e) return { default: e }; var t = _getRequireWildcardCache(r); if (t && t.has(e)) return t.get(e); var n = { __proto__: null }, a = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var u in e) if ("default" !== u && Object.prototype.hasOwnProperty.call(e, u)) { var i = a ? Object.getOwnPropertyDescriptor(e, u) : null; i && (i.get || i.set) ? Object.defineProperty(n, u, i) : n[u] = e[u]; } return n.default = e, t && t.set(e, n), n; }
+function _typeof(o) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) { return typeof o; } : function (o) { return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o; }, _typeof(o); }
+function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+function _iterableToArray(iter) { if (typeof Symbol !== "undefined" && iter[Symbol.iterator] != null || iter["@@iterator"] != null) return Array.from(iter); }
+function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToArray(arr); }
+function ownKeys(e, r) { var t = Object.keys(e); if (Object.getOwnPropertySymbols) { var o = Object.getOwnPropertySymbols(e); r && (o = o.filter(function (r) { return Object.getOwnPropertyDescriptor(e, r).enumerable; })), t.push.apply(t, o); } return t; }
+function _objectSpread(e) { for (var r = 1; r < arguments.length; r++) { var t = null != arguments[r] ? arguments[r] : {}; r % 2 ? ownKeys(Object(t), !0).forEach(function (r) { _defineProperty(e, r, t[r]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t)) : ownKeys(Object(t)).forEach(function (r) { Object.defineProperty(e, r, Object.getOwnPropertyDescriptor(t, r)); }); } return e; }
+function _defineProperty(obj, key, value) { key = _toPropertyKey(key); if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+function _toPropertyKey(arg) { var key = _toPrimitive(arg, "string"); return _typeof(key) === "symbol" ? key : String(key); }
+function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) arr2[i] = arr[i]; return arr2; }
+function _iterableToArrayLimit(r, l) { var t = null == r ? null : "undefined" != typeof Symbol && r[Symbol.iterator] || r["@@iterator"]; if (null != t) { var e, n, i, u, a = [], f = !0, o = !1; try { if (i = (t = t.call(r)).next, 0 === l) { if (Object(t) !== t) return; f = !1; } else for (; !(f = (e = i.call(t)).done) && (a.push(e.value), a.length !== l); f = !0); } catch (r) { o = !0, n = r; } finally { try { if (!f && null != t.return && (u = t.return(), Object(u) !== u)) return; } finally { if (o) throw n; } } return a; } }
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+function _objectDestructuringEmpty(obj) { if (obj == null) throw new TypeError("Cannot destructure " + obj); }
+var Playvideo = function Playvideo(_ref) {
+  var _videoitem$snippet, _videoitem$snippet2, _videoitem$snippet3;
+  _objectDestructuringEmpty(_ref);
+  // const notify = () => toast("Wow so easy !");
+  var _useContext = (0, _react.useContext)(_usecontext.playlistdata),
+    data = _useContext.data,
+    setData = _useContext.setData;
+  var _useState = (0, _react.useState)(false),
+    _useState2 = _slicedToArray(_useState, 2),
+    isLiked = _useState2[0],
+    setIsLiked = _useState2[1];
+  var _useContext2 = (0, _react.useContext)(_usecontext.playlistdata),
+    Liked = _useContext2.state.Liked,
+    dispatched = _useContext2.dispatched;
+  var _useParams = (0, _reactRouterDom.useParams)(),
+    id = _useParams.id;
+  var _useState3 = (0, _react.useState)([]),
+    _useState4 = _slicedToArray(_useState3, 2),
+    dropdownStates = _useState4[0],
+    setDropdownStates = _useState4[1];
+  var _useState5 = (0, _react.useState)([]),
+    _useState6 = _slicedToArray(_useState5, 2),
+    vidid = _useState6[0],
+    setVidId = _useState6[1];
+  var _useState7 = (0, _react.useState)(""),
+    _useState8 = _slicedToArray(_useState7, 2),
+    inputvalue = _useState8[0],
+    setinputValue = _useState8[1];
+  var _useState9 = (0, _react.useState)(undefined),
+    _useState10 = _slicedToArray(_useState9, 2),
+    omibhai = _useState10[0],
+    setomibhai = _useState10[1];
+  // const [toggle , settoggle] = useState(false)
+  var video = (0, _useYoutubeVideo.default)(id);
+  // console.log(vidid);
+  // console.log(dropdownStates);
+
+  var watchlaters = (0, _reactRedux.useSelector)(function (store) {
+    return store.watchLater.videos;
+  });
+  var toggleDropdown = function toggleDropdown(videoobj) {
+    setDropdownStates(function (prevStates) {
+      return _objectSpread(_objectSpread({}, prevStates), {}, _defineProperty({}, videoobj, !prevStates[videoobj]));
+    });
+    setVidId(videoobj);
+  };
+  var videoitem = video[0];
+  // console.log(videoitem);
+
+  var handleFormSubmit = function handleFormSubmit(e) {
+    e.preventDefault();
+    var newPlaylist = {
+      Playlist: inputvalue,
+      id: Date.now(),
+      videos: []
+    };
+    setData(function (prevData) {
+      return [].concat(_toConsumableArray(prevData), [newPlaylist]);
+    });
+    setinputValue("");
+    // use to store a data in local storage
+    var storedData = JSON.parse(localStorage.getItem("playlists")) || [];
+    localStorage.setItem("playlists", JSON.stringify([].concat(_toConsumableArray(storedData), [newPlaylist])));
+  };
+  var handleInputChange = function handleInputChange(e) {
+    setinputValue(e.target.value);
+  };
+  var Likdevi = function Likdevi() {
+    if (Liked.find(function (vim) {
+      return vim.id === (videoitem === null || videoitem === void 0 ? void 0 : videoitem.id);
+    })) {
+      dispatched({
+        type: "ADD_TO_LIKE",
+        payload: undefined
+      });
+      (0, _reactToastify.toast)("This Video is Already exists!");
+    } else {
+      dispatched({
+        type: "ADD_TO_LIKE",
+        payload: videoitem
+      });
+      localStorage.setItem("likded", JSON.stringify([].concat(_toConsumableArray(Liked), [videoitem])));
+    }
+    setIsLiked(!isLiked);
+  };
+  console.log(Liked);
+  var addtothisPlaylist = function addtothisPlaylist(id) {
+    var playlistToUpdate = data.find(function (item) {
+      return item.id === id;
+    });
+    if (data.some(function (element) {
+      return element.videos.some(function (vid) {
+        return vid.id === vidid.id;
+      });
+    })) {
+      var updatedPlaylist = _objectSpread(_objectSpread({}, playlistToUpdate), {}, {
+        videos: [].concat(_toConsumableArray(playlistToUpdate.videos), [omibhai])
+      });
+      var updatedData = data.map(function (item) {
+        return item.id === id ? updatedPlaylist : item;
+      });
+      localStorage.setItem("playlists", JSON.stringify(updatedData));
+      setData(updatedData);
+      (0, _reactToastify.toast)("This Video is Already exists!");
+    } else {
+      var _updatedPlaylist = _objectSpread(_objectSpread({}, playlistToUpdate), {}, {
+        videos: [].concat(_toConsumableArray(playlistToUpdate.videos), [vidid])
+      });
+
+      // for local storage
+      var _updatedData = data.map(function (item) {
+        return item.id === id ? _updatedPlaylist : item;
+      });
+      localStorage.setItem("playlists", JSON.stringify(_updatedData));
+      setData(_updatedData);
+    }
+  };
+
+  // console.log(data);
+
+  // console.log(data);
+  (0, _react.useEffect)(function () {
+    var storedData = JSON.parse(localStorage.getItem("playlists")) || [];
+    setData(storedData);
+  }, []);
+  var dispatch = (0, _reactRedux.useDispatch)();
+  // console.log(watchlaters);
+
+  var add = function add() {
+    if (watchlaters.find(function (vid) {
+      return (vid === null || vid === void 0 ? void 0 : vid.id) === (videoitem === null || videoitem === void 0 ? void 0 : videoitem.id);
+    })) {
+      dispatch((0, _WatchLater.addToWatchLater)(undefined));
+      (0, _reactToastify.toast)("This Video is Already exists!");
+    } else {
+      dispatch((0, _WatchLater.addToWatchLater)(videoitem));
+      localStorage.setItem("watch", JSON.stringify([].concat(_toConsumableArray(watchlaters), [videoitem])));
+    }
+  };
+  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement("div", {
+    className: "  bg-black py-12"
+  }, /*#__PURE__*/_react.default.createElement("div", {
+    className: "ml-12 "
+  }, /*#__PURE__*/_react.default.createElement("div", {
+    className: ""
+  }, /*#__PURE__*/_react.default.createElement("iframe", {
+    className: "rounded-lg",
+    style: {
+      height: "650px",
+      width: "1350px"
+    },
+    src: videoitem === null || videoitem === void 0 ? void 0 : videoitem.Videolink
+  })), /*#__PURE__*/_react.default.createElement("div", {
+    className: ""
+  }, /*#__PURE__*/_react.default.createElement("div", {
+    className: " mt-4"
+  }, /*#__PURE__*/_react.default.createElement("h1", {
+    className: "font-medium text-white text-lg"
+  }, videoitem === null || videoitem === void 0 || (_videoitem$snippet = videoitem.snippet) === null || _videoitem$snippet === void 0 ? void 0 : _videoitem$snippet.title)), /*#__PURE__*/_react.default.createElement("div", {
+    className: "w-3/4 "
+  }, /*#__PURE__*/_react.default.createElement("div", {
+    className: "flex mt-4 justify-between"
+  }, /*#__PURE__*/_react.default.createElement("div", {
+    className: "flex gap-5 items-center"
+  }, /*#__PURE__*/_react.default.createElement("img", {
+    className: " rounded-full w-12 h-12",
+    src: videoitem === null || videoitem === void 0 || (_videoitem$snippet2 = videoitem.snippet) === null || _videoitem$snippet2 === void 0 || (_videoitem$snippet2 = _videoitem$snippet2.thumbnails) === null || _videoitem$snippet2 === void 0 || (_videoitem$snippet2 = _videoitem$snippet2.high) === null || _videoitem$snippet2 === void 0 ? void 0 : _videoitem$snippet2.default
+  }), /*#__PURE__*/_react.default.createElement("h1", {
+    className: "font-medium text-white text-lg"
+  }, videoitem === null || videoitem === void 0 || (_videoitem$snippet3 = videoitem.snippet) === null || _videoitem$snippet3 === void 0 ? void 0 : _videoitem$snippet3.channelTitle), /*#__PURE__*/_react.default.createElement("button", {
+    className: "border-2 px-4 py-1 rounded-full  text-white"
+  }, "Join"), /*#__PURE__*/_react.default.createElement("button", {
+    className: "bg-white p-2 rounded-full text-black"
+  }, "Subscribe")), /*#__PURE__*/_react.default.createElement("div", {
+    className: "flex gap-4 h-9 "
+  }, /*#__PURE__*/_react.default.createElement("div", {
+    className: "bg-gray-700 flex  text-center   rounded-full gap-3"
+  }, /*#__PURE__*/_react.default.createElement("button", {
+    className: "ml-2",
+    onClick: function onClick() {
+      return Likdevi();
+    }
+  }, /*#__PURE__*/_react.default.createElement("img", {
+    className: "w-7",
+    src: isLiked ? _like.default : _like2.default
+  }), /*#__PURE__*/_react.default.createElement(_reactToastify.ToastContainer, null)), /*#__PURE__*/_react.default.createElement("span", {
+    className: "text-white text-2xl"
+  }, "|"), /*#__PURE__*/_react.default.createElement("button", {
+    className: "mr-2"
+  }, /*#__PURE__*/_react.default.createElement("img", {
+    src: _like.default,
+    className: "w-6"
+  }))), /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("button", {
+    className: " inline-flex items-center px-4 py-2 text-white rounded-full bg-gray-700 text-sm font-medium  hover:bg-gray-600 focus:outline-none focus:ring focus:border-blue-300",
+    onClick: function onClick() {
+      return add(videoitem);
+    }
+  }, "Watch later"), /*#__PURE__*/_react.default.createElement(_reactToastify.ToastContainer, null)), /*#__PURE__*/_react.default.createElement("div", {
+    className: "relative inline-block text-left"
+  }, /*#__PURE__*/_react.default.createElement("button", {
+    type: "button",
+    onClick: function onClick() {
+      return toggleDropdown(videoitem);
+    },
+    className: " inline-flex items-center px-6 py-2 text-white rounded-full bg-gray-700 text-sm font-medium  hover:bg-gray-600 focus:outline-none focus:ring focus:border-blue-300"
+  }, "Save"), dropdownStates[videoitem] && /*#__PURE__*/_react.default.createElement("div", {
+    className: "origin-top-right absolute right-96 w-52 h-60 bg-gray-800 -mt-96 rounded-md shadow-lg text-center  ring-1 ring-black ring-opacity-5"
+  }, /*#__PURE__*/_react.default.createElement("div", {
+    className: "flex justify-around"
+  }, /*#__PURE__*/_react.default.createElement("span", {
+    className: "text-white text-xl"
+  }, "Save the to...")), /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("ul", null, data.map(function (item) {
+    return /*#__PURE__*/_react.default.createElement("div", {
+      key: item.id
+    }, /*#__PURE__*/_react.default.createElement("button", {
+      onClick: function onClick() {
+        return addtothisPlaylist(item.id);
+      },
+      className: "p-1 text-white text-center border-2 mt-1 ",
+      key: item.id
+    }, item.Playlist, /*#__PURE__*/_react.default.createElement(_reactToastify.ToastContainer, null)));
+  }))), /*#__PURE__*/_react.default.createElement("div", {
+    className: "mt-1 text-center "
+  }, /*#__PURE__*/_react.default.createElement("div", {
+    className: "text-left ml-6"
+  }, /*#__PURE__*/_react.default.createElement("label", {
+    className: "text-white"
+  }, "Name")), /*#__PURE__*/_react.default.createElement("input", {
+    className: "w-40 border-0 bg-gray-800 text-white",
+    placeholder: "+ Create New Playlist",
+    type: "text",
+    value: inputvalue,
+    onChange: handleInputChange
+  }), /*#__PURE__*/_react.default.createElement("button", {
+    className: " text-white   ",
+    onClick: handleFormSubmit
+  }, "Create")))))))))));
+};
+var _default = exports.default = Playvideo;
+},{"react":"node_modules/react/index.js","../utils/useYoutubeVideo":"src/utils/useYoutubeVideo.js","react-router-dom":"node_modules/react-router-dom/dist/index.js","../utils/WatchLater":"src/utils/WatchLater.js","../components.js/like.jpg":"src/components.js/like.jpg","../components.js/like1.jpg":"src/components.js/like1.jpg","react-redux":"node_modules/react-redux/es/index.js","../utils/usecontext":"src/utils/usecontext.js","react-toastify":"node_modules/react-toastify/dist/react-toastify.esm.mjs","react-toastify/dist/ReactToastify.css":"node_modules/react-toastify/dist/ReactToastify.css"}],"src/components.js/watchlater2.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
 var _react = _interopRequireDefault(require("react"));
+var _reactRouterDom = require("react-router-dom");
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+var Watchedlater = function Watchedlater(_ref) {
+  var snippet = _ref.snippet,
+    Videolink = _ref.Videolink,
+    id = _ref.id;
+  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("div", {
+    className: "w-96 bg-white ml-10"
+  }, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
+    to: '/Videoid/:id' + id
+  }, /*#__PURE__*/_react.default.createElement("iframe", {
+    className: "border-2 rounded-lg bg-white ",
+    style: {
+      height: '250px',
+      width: '400px'
+    },
+    src: Videolink
+  }), /*#__PURE__*/_react.default.createElement("span", {
+    className: "font-medium"
+  }, snippet.title), /*#__PURE__*/_react.default.createElement("p", {
+    className: "text-sm text-gray-500"
+  }, snippet.channelTitle)))));
+};
+var _default = exports.default = Watchedlater;
+},{"react":"node_modules/react/index.js","react-router-dom":"node_modules/react-router-dom/dist/index.js"}],"src/components.js/WatchLater.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+var _react = _interopRequireDefault(require("react"));
+var _reactRedux = require("react-redux");
+var _watchlater = _interopRequireDefault(require("./watchlater2"));
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+function _extends() { _extends = Object.assign ? Object.assign.bind() : function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+var WatchLater = function WatchLater() {
+  var watchlaters = (0, _reactRedux.useSelector)(function (store) {
+    return store.watchLater.videos;
+  });
+  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement("h1", {
+    className: "text-center mt-5 text-3xl font-semibold"
+  }, "Watch Later Videos : ", watchlaters.length), /*#__PURE__*/_react.default.createElement("div", {
+    className: "mt-5 gap-10 flex-wrap flex"
+  }, watchlaters.map(function (item) {
+    var mappedItem = item === undefined ? null : item;
+    return mappedItem !== null ? /*#__PURE__*/_react.default.createElement(_watchlater.default, _extends({
+      key: mappedItem.id
+    }, mappedItem)) : null;
+  })));
+};
+var _default = exports.default = WatchLater;
+},{"react":"node_modules/react/index.js","react-redux":"node_modules/react-redux/es/index.js","./watchlater2":"src/components.js/watchlater2.js"}],"src/components.js/LikedVdeos.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+var _react = _interopRequireWildcard(require("react"));
+var _usecontext = require("../utils/usecontext");
+var _reactRouterDom = require("react-router-dom");
+function _getRequireWildcardCache(e) { if ("function" != typeof WeakMap) return null; var r = new WeakMap(), t = new WeakMap(); return (_getRequireWildcardCache = function (e) { return e ? t : r; })(e); }
+function _interopRequireWildcard(e, r) { if (!r && e && e.__esModule) return e; if (null === e || "object" != typeof e && "function" != typeof e) return { default: e }; var t = _getRequireWildcardCache(r); if (t && t.has(e)) return t.get(e); var n = { __proto__: null }, a = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var u in e) if ("default" !== u && Object.prototype.hasOwnProperty.call(e, u)) { var i = a ? Object.getOwnPropertyDescriptor(e, u) : null; i && (i.get || i.set) ? Object.defineProperty(n, u, i) : n[u] = e[u]; } return n.default = e, t && t.set(e, n), n; }
+var LikedVideos = function LikedVideos() {
+  var _useContext = (0, _react.useContext)(_usecontext.playlistdata),
+    Liked = _useContext.state.Liked;
+  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement("h1", {
+    className: " text-center mt-5 text-3xl font-semibold "
+  }, "Like Videos : ", Liked.length, " "), /*#__PURE__*/_react.default.createElement("div", {
+    className: "flex gap-10 flex-wrap "
+  }, Liked.map(function (item) {
+    var _item$snippet;
+    var mapped = item === undefined || item === null ? null : item;
+    return mapped != null ? /*#__PURE__*/_react.default.createElement("div", {
+      className: "w-96 rounded-3xl mt-10 ml-10"
+    }, /*#__PURE__*/_react.default.createElement(_reactRouterDom.Link, {
+      to: "/Videoid/" + item.id
+    }, /*#__PURE__*/_react.default.createElement("img", {
+      className: "h-60 w-96   rounded-lg",
+      src: item === null || item === void 0 || (_item$snippet = item.snippet) === null || _item$snippet === void 0 || (_item$snippet = _item$snippet.thumbnails) === null || _item$snippet === void 0 || (_item$snippet = _item$snippet.high) === null || _item$snippet === void 0 ? void 0 : _item$snippet.url,
+      alt: "Video Thumbnail"
+    }), /*#__PURE__*/_react.default.createElement("span", {
+      className: "font-medium"
+    }, item.snippet.title), /*#__PURE__*/_react.default.createElement("p", {
+      className: "text-sm text-gray-500"
+    }, item.snippet.channelTitle))) : null;
+  })));
+};
+var _default = exports.default = LikedVideos;
+},{"react":"node_modules/react/index.js","../utils/usecontext":"src/utils/usecontext.js","react-router-dom":"node_modules/react-router-dom/dist/index.js"}],"script.js":[function(require,module,exports) {
+"use strict";
+
+var _react = _interopRequireWildcard(require("react"));
 var _client = _interopRequireDefault(require("react-dom/client"));
 var _Header = _interopRequireDefault(require("./src/components.js/Header"));
 var _Playlist = _interopRequireDefault(require("./src/components.js/Playlist"));
@@ -44591,12 +46073,17 @@ var _newplaylist = _interopRequireDefault(require("./src/components.js/newplayli
 var _YoutubeVideos = _interopRequireDefault(require("./src/components.js/YoutubeVideos"));
 var _reactRedux = require("react-redux");
 var _store = _interopRequireDefault(require("./src/utils/store"));
-var _test = _interopRequireDefault(require("./test"));
+var _PlayVideo = _interopRequireDefault(require("./src/components.js/PlayVideo"));
+var _WatchLater = _interopRequireDefault(require("./src/components.js/WatchLater"));
+var _LikedVdeos = _interopRequireDefault(require("./src/components.js/LikedVdeos"));
+var _usecontext = _interopRequireDefault(require("./src/utils/usecontext"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+function _getRequireWildcardCache(e) { if ("function" != typeof WeakMap) return null; var r = new WeakMap(), t = new WeakMap(); return (_getRequireWildcardCache = function (e) { return e ? t : r; })(e); }
+function _interopRequireWildcard(e, r) { if (!r && e && e.__esModule) return e; if (null === e || "object" != typeof e && "function" != typeof e) return { default: e }; var t = _getRequireWildcardCache(r); if (t && t.has(e)) return t.get(e); var n = { __proto__: null }, a = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var u in e) if ("default" !== u && Object.prototype.hasOwnProperty.call(e, u)) { var i = a ? Object.getOwnPropertyDescriptor(e, u) : null; i && (i.get || i.set) ? Object.defineProperty(n, u, i) : n[u] = e[u]; } return n.default = e, t && t.set(e, n), n; }
 var Applaout = function Applaout() {
-  return /*#__PURE__*/_react.default.createElement(_reactRedux.Provider, {
+  return /*#__PURE__*/_react.default.createElement(_react.default.Fragment, null, /*#__PURE__*/_react.default.createElement(_usecontext.default, null, /*#__PURE__*/_react.default.createElement(_reactRedux.Provider, {
     store: _store.default
-  }, /*#__PURE__*/_react.default.createElement(_Header.default, null), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Outlet, null));
+  }, /*#__PURE__*/_react.default.createElement(_Header.default, null), /*#__PURE__*/_react.default.createElement(_reactRouterDom.Outlet, null))));
 };
 var approuter = (0, _reactRouterDom.createBrowserRouter)([{
   path: "/",
@@ -44611,15 +46098,21 @@ var approuter = (0, _reactRouterDom.createBrowserRouter)([{
     path: "/",
     element: /*#__PURE__*/_react.default.createElement(_YoutubeVideos.default, null)
   }, {
-    path: "/Test",
-    element: /*#__PURE__*/_react.default.createElement(_test.default, null)
+    path: "/Videoid/:id",
+    element: /*#__PURE__*/_react.default.createElement(_PlayVideo.default, null)
+  }, {
+    path: "/watchlater",
+    element: /*#__PURE__*/_react.default.createElement(_WatchLater.default, null)
+  }, {
+    path: "/LikedVideos",
+    element: /*#__PURE__*/_react.default.createElement(_LikedVdeos.default, null)
   }]
 }]);
 var root = _client.default.createRoot(document.getElementById("root"));
 root.render( /*#__PURE__*/_react.default.createElement(_reactRouterDom.RouterProvider, {
   router: approuter
 }));
-},{"react":"node_modules/react/index.js","react-dom/client":"node_modules/react-dom/client.js","./src/components.js/Header":"src/components.js/Header.js","./src/components.js/Playlist":"src/components.js/Playlist.js","react-router-dom":"node_modules/react-router-dom/dist/index.js","./src/components.js/newplaylist":"src/components.js/newplaylist.js","./src/components.js/YoutubeVideos":"src/components.js/YoutubeVideos.js","react-redux":"node_modules/react-redux/es/index.js","./src/utils/store":"src/utils/store.js","./test":"test.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"react":"node_modules/react/index.js","react-dom/client":"node_modules/react-dom/client.js","./src/components.js/Header":"src/components.js/Header.js","./src/components.js/Playlist":"src/components.js/Playlist.js","react-router-dom":"node_modules/react-router-dom/dist/index.js","./src/components.js/newplaylist":"src/components.js/newplaylist.js","./src/components.js/YoutubeVideos":"src/components.js/YoutubeVideos.js","react-redux":"node_modules/react-redux/es/index.js","./src/utils/store":"src/utils/store.js","./src/components.js/PlayVideo":"src/components.js/PlayVideo.js","./src/components.js/WatchLater":"src/components.js/WatchLater.js","./src/components.js/LikedVdeos":"src/components.js/LikedVdeos.js","./src/utils/usecontext":"src/utils/usecontext.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -44644,7 +46137,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "36937" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "33569" + '/');
   ws.onmessage = function (event) {
     checkedAssets = {};
     assetsToAccept = [];

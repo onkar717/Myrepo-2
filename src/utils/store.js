@@ -1,9 +1,10 @@
 import { configureStore } from "@reduxjs/toolkit";
-import VideoSlice from "./VideoSlice";
+import watchLaterSlice from "./WatchLater";
+
 
 const store = configureStore({
   reducer:{
-    video: VideoSlice,
+    watchLater:watchLaterSlice
   }, 
 })
 

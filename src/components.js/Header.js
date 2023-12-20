@@ -7,7 +7,6 @@ import { playlistdata } from "../utils/usecontext";
 const Header = () => {
   // const [Search, setSearch] = useState("");
   const {Search , setSearch} = useContext(playlistdata)
-  const [value , setvalue ] = useState()
 
   // Your YouTube video URL
   // const searchfunction = (Search) => {
@@ -73,9 +72,9 @@ const Header = () => {
             </span>
                 </div>
           </Link>
-          <Link to="/watchlater" onClick={() => setSearch(e.target.value)}>
+          <Link to="/watchlater">
             <div className="flex items-center gap-2">
-            <li className="font-semibold">
+            <li onClick={() => setSearch(e.target.value)} className="font-semibold" >
             Watch later
             </li>
             <span>
@@ -91,9 +90,9 @@ const Header = () => {
             </span>
             </div>
           </Link>
-          <Link to="/likedVideos"onClick={() => setSearch(e.target.value)} >
+          <Link to="/likedVideos" >
             <div className="flex items-center gap-2">
-            <li className="font-semibold">
+            <li className="font-semibold" onClick={() => setSearch(e.target.value)}>
               Like videos
             </li>
             <span>
